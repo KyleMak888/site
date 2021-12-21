@@ -20,7 +20,7 @@
             <el-input v-model="form.mail" autocomplete="off"></el-input>
           </el-form-item>
           <el-form-item prop="company">
-            <div class="text-md font-bold text-left leading-6">公司名称</div>
+            <div class="text-md font-bold text-left leading-6">公司名称(选填)</div>
             <el-input v-model="form.company" autocomplete="off"></el-input>
           </el-form-item>
           <el-form-item prop="content">

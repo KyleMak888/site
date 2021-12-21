@@ -47,6 +47,13 @@
                 <p class="pt-2">{{copy}}</p>
               </div>
             </div>
+            <!-- code -->
+            <!-- https://github.com/elisiondesign/vue-code-highlight -->
+            <div class="overflow-x-scroll" v-else-if="content.type === 'code'">
+              <vue-code-highlight :language="content.lang">
+                {{content.value}}
+              </vue-code-highlight>
+            </div>
           </div>
         </div>
       </div>
@@ -73,6 +80,7 @@
 </template>
 
 <script>
+import { component as VueCodeHighlight } from 'vue-code-highlight';
 import { postList } from '@/posts/postList'
 
 export default {
@@ -89,6 +97,9 @@ export default {
       type: Number,
       default: 0
     }
+  },
+  components: {
+    VueCodeHighlight,
   },
   methods: {
     tapToPost(id) {
