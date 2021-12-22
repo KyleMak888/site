@@ -7,10 +7,12 @@ import VueWow from 'vue-wow'
 import './theme/index.css'
 import './theme/tailwind.css'
 import './theme/theme.scss'
+import * as api from '@/api/index'
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.use(VueWow)
+Vue.prototype.$api = api
 
 new Vue({
   router,
