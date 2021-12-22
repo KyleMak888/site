@@ -16,7 +16,7 @@ export default {
         },
         {
           icon: 'message',
-          text: 'chreta.com@gmail.com'
+          text: 'linkingend@gmail.com'
         },
         {
           icon: 'map-location',
