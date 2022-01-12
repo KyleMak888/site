@@ -128,6 +128,8 @@
 </template>
 
 <script>
+import { Message } from 'element-ui';
+
 export default {
   name: "Contact",
   data() {
@@ -190,7 +192,16 @@ export default {
           company,
           need
         };
-        this.$api.postContact(data)
+        const resp = await this.$api.postContact(data)
+        if (resp.code == 0) {
+          Message({
+            message: '提交成功!',
+            type: 'success',
+            showClose: true,
+            center: true,
+            offset: 120
+          })
+        }
       }
     }
   }
