@@ -24,7 +24,7 @@ export default {
         },
         {
           icon: 'message',
-          text: 'linkingend@gmail.com'
+          text: 'kyle@linkingend.com'
         },
         {
           icon: 'map-location',

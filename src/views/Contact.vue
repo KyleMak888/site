@@ -3,7 +3,7 @@
     <div class="contact md-auto px-6 sm:px-24 pt-28 pb-0 overflow-x-hidden">
       <div class="text-xl sm:text-4xl font-bold">欢迎来撩</div>
       <div class="text-md text-gray-300">
-        请发送表单或发邮至 linkingend@gmail.com 与我们进行联系
+        请发送表单或发邮至 kyle@linkingend.com 与我们进行联系
       </div>
       <div class="relative max-w-xl mx-auto pt-12">
         <svg
@@ -166,7 +166,7 @@ export default {
         {
           icon: require("@/assets/icons/mail.png"),
           label: "邮箱",
-          content: "linkingend@gmail.com"
+          content: "kyle@linkingend.com"
         },
         {
           icon: require("@/assets/icons/map.png"),
