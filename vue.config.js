@@ -11,31 +11,6 @@ const isDev = process.env.NODE_ENV === 'development'
 const BASE_URL = isDev ? DEV_REQUEST_URL : PRODUCT_REQUEST_URL
 
 const vueConfig = {
-  publicPath: '',
-  productionSourceMap: false,
-
-  chainWebpack: (config) => {
-    config.resolve.alias.set('@', resolve('src'))
-
-    const svgRule = config.module.rule('svg')
-    svgRule.uses.clear()
-    svgRule
-      .oneOf('inline')
-      .resourceQuery(/inline/)
-      .use('vue-svg-icon-loader')
-      .loader('vue-svg-icon-loader')
-      .end()
-      .end()
-      .oneOf('external')
-      .use('file-loader')
-      .loader('file-loader')
-    // .options({
-    //   publicPath: process.env.NODE_ENV === 'production' ? 'https://oss.xx.com/img' : './',
-    //   name: 'assets/[name].[hash:8].[ext]'
-    // })
-    config.output.filename('[name].[hash].js').end()
-  },
-
   devServer: {
     disableHostCheck: true,
     host: '0.0.0.0',
