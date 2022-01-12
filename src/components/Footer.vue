@@ -37,7 +37,7 @@ export default {
   name: 'Footer',
   data() {
     return {
-      logo: require('@/assets/logo_final_tb.svg'),
+      logo: require('@/assets/logo_final_tb.png'),
       wechatCode: require('@/assets/wechat_qrcode.jpeg'),
     }
   },

@@ -70,7 +70,7 @@ export default {
   data() {
     return {
       banner: require('@/assets/about-banner-bg.jpg'),
-      logo: require('@/assets/logo_final_tb.svg'),
+      logo: require('@/assets/logo_final_tb.png'),
       logoWCL: require('@/assets/logo/wcl.svg'),
       contactList: [
         {
