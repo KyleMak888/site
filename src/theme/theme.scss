@@ -15,6 +15,9 @@ $secondary-color: #001847;
 .text-primary {
   color: $primary-color;
 }
+.text-secondary {
+  color: $secondary-color;
+}
 .link-primary {
   color: $primary-color;
   &:active,

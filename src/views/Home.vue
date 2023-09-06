@@ -1,21 +1,24 @@
 <template>
   <div id="home">
-    <section class="banner relative flex items-center w-screen">
-      <el-image class="absolute w-screen h-full opacity-30 z-0" :src="banner" fit="cover"></el-image>
-      <div class="px-10 md:px-32 text-2xl sm:text-6xl text-left text-white tracking-wide font-bold z-10">
-        <div>全方位互联网解决方案</div>
-        <div class="pt-5">解锁商业价值，助力企业迈向成功</div>
+    <section class="relative flex items-center w-screen banner">
+      <el-image class="absolute z-0 w-screen h-full opacity-30" :src="banner" fit="cover"></el-image>
+      <div class="z-10 px-10 text-2xl font-bold tracking-wide text-left text-white md:px-32 sm:text-6xl">
+        <h2>
+          <span>全方位互联网</span>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-green-400">解決方案</span>
+        </h2>
+        <h2 class="pt-5">解锁商业价值，助力企业迈向成功</h2>
       </div>
     </section>
 
     <section class="w-screen">
-      <div class="px-8 sm:px-20 flex flex-wrap justify-around">
-        <div class="w-96 pb-8" v-for="(service, index) in serviceList" :key="index">
-          <el-card class="relative border-none bg-gradient-blue px-6 py-4 text-left tracking-wide shadow-2xl transform -translate-y-1/4">
-            <el-image class="absolute left-0 right-0 bottom-0 w-full h-3/4 z-0" :src="homeCap" fit="fill"></el-image>
-            <div class="text-xl text-white pb-6 truncate">{{service.type}}</div>
-            <div class="flex items-center pb-3 text-gray-300" v-for="(s, i) in service.dataList" :key="i">
-              <i class="block el-icon-success fill-current text-blue-600 transform scale-125"></i>
+      <div class="flex flex-wrap justify-around px-8 sm:px-20">
+        <div class="pb-8 w-96" v-for="(service, index) in serviceList" :key="index">
+          <el-card class="relative px-6 py-4 tracking-wide text-left transform border-none shadow-2xl bg-gradient-blue -translate-y-1/4">
+            <el-image class="absolute bottom-0 left-0 right-0 z-0 w-full h-3/4" :src="homeCap" fit="fill"></el-image>
+            <div class="pb-6 text-xl font-bold text-white truncate">{{service.type}}</div>
+            <div class="flex items-center pb-3 text-gray-200" v-for="(s, i) in service.dataList" :key="i">
+              <i class="block text-blue-600 transform scale-125 fill-current el-icon-success"></i>
               <div class="pl-3 truncate">{{s}}</div>
             </div>
           </el-card>
@@ -24,15 +27,15 @@
     </section>
 
     <!-- <section>
-      <div class="text-center text-2xl sm:text-4xl text-black">适用领域</div>
+      <div class="text-2xl text-center text-black sm:text-4xl">适用领域</div>
       <el-divider class="w-1/2 mx-auto"></el-divider>
-      <div class="pb-8 flex flex-wrap justify-around">
+      <div class="flex flex-wrap justify-around pb-8">
         <div
           v-for="(c, index) in catalogList"
           :key="index"
-          class="bg-catalog case w-full md:w-1/3 pb-8 flex items-center justify-center"
+          class="flex items-center justify-center w-full pb-8 bg-catalog case md:w-1/3"
           :class="index > 2 ? 'hidden md:flex' : ''">
-          <div class="w-32 h-32 flex items-center justify-center text-white">
+          <div class="flex items-center justify-center w-32 h-32 text-white">
             <el-image class="logo" :class="c.name" :src="c.logo" fit="fill"></el-image>
           </div>
         </div>
@@ -40,33 +43,33 @@
     </section> -->
 
     <section>
-      <div class="text-center text-2xl sm:text-4xl text-black">合作案例</div>
+      <h2 class="text-2xl text-center text-black sm:text-4xl">合作案例</h2>
       <el-divider class="w-1/2 mx-auto"></el-divider>
-      <div class="pb-8 flex flex-wrap justify-around">
+      <div class="flex flex-wrap justify-around pb-8">
         <div
           v-for="(c, index) in caseList"
           :key="index"
-          class="case w-full md:w-1/3 pb-8 flex items-center justify-center"
+          class="flex items-center justify-center w-full pb-8 case md:w-1/3"
           :class="index > 2 ? 'hidden md:flex' : ''">
-          <div class="w-32 h-32 flex items-center justify-center text-white">
+          <div class="flex items-center justify-center w-32 h-32 text-white">
             <el-image class="logo" :class="c.name" :src="c.logo" fit="fill"></el-image>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="bg py-8 flex items-center flex-wrap">
-      <div class="w-1/2 text-left pl-6 sm:w-2/5 sm:text-center sm:pl-0 text-2xl sm:text-4xl text-black py-10">最新资讯</div>
-      <div class="flex-1 text-left px-6 sm:pr-10 sm:pl-0">
-        <!-- <div class="text-xl sm:text-4xl text-black leading-tight">We bring tech, design, data and business chops together to deliver software solutions to tens of millions of users.</div> -->
+    <section class="flex flex-wrap items-center py-8 bg">
+      <h2 class="w-1/2 py-10 pl-6 text-2xl text-left text-black sm:w-2/5 sm:text-center sm:pl-0 sm:text-4xl">最新资讯</h2>
+      <div class="flex-1 px-6 text-left sm:pr-10 sm:pl-0">
+        <!-- <div class="text-xl leading-tight text-black sm:text-4xl">We bring tech, design, data and business chops together to deliver software solutions to tens of millions of users.</div> -->
         <!-- <el-button class="mt-6">查看更多</el-button> -->
         <el-divider class="mx-auto"></el-divider>
         <div class="post-group">
-          <el-card class="mt-6 bg cursor-pointer border-none" v-for="(post, i) in postList" :key="i" shadow="hover" @click.native="tapToPost(i)">
+          <el-card class="mt-6 border-none cursor-pointer bg" v-for="(post, i) in postList" :key="i" shadow="hover" @click.native="tapToPost(i)">
             <div class="flex">
               <el-image class="w-16 h-16" :src="post.thumbnail ? require('@/assets/post/' + post.thumbnail) : logoFinal" fit="fill"></el-image>
               <div class="flex-1 pl-6 pr-0 sm:pl-8 sm:pr-8">
-                <div class="text-xl sm:text-2xl text-black font-bold" to="/post">{{post.title}}</div>
+                <div class="text-xl font-bold text-black sm:text-2xl" to="/post">{{post.title}}</div>
                 <div class="text-sm sm:text-md">{{post.subTitle}}</div>
               </div>
             </div>
@@ -99,15 +102,15 @@ export default {
       serviceList: [
         {
           type: '我们的服务',
-          dataList: ['APP及小程序开发', '物联网及大数据', '定制化软件']
+          dataList: ['APP及小程序开发', '3D应用定制', '互动营销网页制作']
         },
         {
           type: '数据分析',
-          dataList: ['埋点检测', '洞察发现', '建模预测']
+          dataList: ['埋点检测', '洞察发现', '孪生预测']
         },
         {
-          type: '商业咨询',
-          dataList: ['解决方案', '市场机遇探索', '执行辅助']
+          type: '商业资讯',
+          dataList: ['行业解决方案', '市场机遇探索', '最佳实践']
         }
       ],
       caseList: [
@@ -178,10 +181,12 @@ export default {
 #home {
   .banner {
     height: 75vh;
+    /* background: #00342f; */
     background: #001847;
   }
   .bg-gradient-blue {
     background-image: linear-gradient(to bottom right,#32496d,#001847);
+    /* background-image: linear-gradient(to bottom right, #18BC9C, #02463a); */
   }
   .bg-catalog {
   }

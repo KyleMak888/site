@@ -86,7 +86,7 @@ export default {
         {
           icon: require('@/assets/icons/mail.png'),
           label: '邮箱',
-          content: 'kyle@linkingend.com'
+          content: 'kyle@linkendtech.com'
         },
         {
           icon: require('@/assets/icons/map.png'),

@@ -1,11 +1,11 @@
 <template>
   <div id="contact">
-    <div class="contact md-auto px-6 sm:px-24 pt-28 pb-0 overflow-x-hidden">
-      <div class="text-xl sm:text-4xl font-bold">欢迎来撩</div>
-      <div class="text-md text-gray-300">
-        请发送表单或发邮至 kyle@linkingend.com 与我们进行联系
+    <div class="px-6 pb-0 overflow-x-hidden contact md-auto sm:px-24 pt-28">
+      <div class="text-xl font-bold sm:text-4xl">欢迎来撩</div>
+      <div class="text-gray-300 text-md">
+        请发送表单或发邮至 kyle@linkendtech.com 与我们进行联系
       </div>
-      <div class="relative max-w-xl mx-auto pt-12">
+      <div class="relative max-w-xl pt-12 mx-auto">
         <svg
           fill="none"
           viewBox="0 0 404 404"
@@ -70,25 +70,25 @@
           label-width="auto"
         >
           <el-form-item prop="name">
-            <div class="text-md font-bold text-left leading-6">称呼</div>
+            <div class="font-bold leading-6 text-left text-md">称呼</div>
             <el-input v-model="form.name" autocomplete="off"></el-input>
           </el-form-item>
           <el-form-item prop="phone">
-            <div class="text-md font-bold text-left leading-6">电话号码</div>
+            <div class="font-bold leading-6 text-left text-md">电话号码</div>
             <el-input v-model="form.phone" autocomplete="off"></el-input>
           </el-form-item>
           <el-form-item prop="mail">
-            <div class="text-md font-bold text-left leading-6">邮箱</div>
+            <div class="font-bold leading-6 text-left text-md">邮箱</div>
             <el-input v-model="form.mail" autocomplete="off"></el-input>
           </el-form-item>
           <el-form-item prop="company">
-            <div class="text-md font-bold text-left leading-6">
+            <div class="font-bold leading-6 text-left text-md">
               公司名称(选填)
             </div>
             <el-input v-model="form.company" autocomplete="off"></el-input>
           </el-form-item>
           <el-form-item prop="content">
-            <div class="text-md font-bold text-left leading-6">业务需求</div>
+            <div class="font-bold leading-6 text-left text-md">业务需求</div>
             <el-input
               type="textarea"
               v-model="form.content"
@@ -97,28 +97,28 @@
             ></el-input>
           </el-form-item>
           <el-form-item>
-            <el-button class="w-full" type="primary" @click="submit('form')"
-              >提交</el-button
+            <el-button class="w-full" type="primary" @click="submit('form')" disabled
+              >系统维护中, 请通过电话或邮箱联系</el-button
             >
           </el-form-item>
         </el-form>
       </div>
     </div>
 
-    <section class="py-4 px-6 sm:py-12 sm:px-24 sm:pb-24">
+    <section class="px-6 py-4 sm:py-12 sm:px-24 sm:pb-24">
       <div class="flex flex-wrap items-center justify-around pt-6 sm:pt-10">
         <div
-          class="w-full md:w-1/4 flex flex-wrap flex-col items-center justify-center pt-6"
+          class="flex flex-col flex-wrap items-center justify-center w-full pt-6 md:w-1/4"
           v-for="(contact, index) in contactList"
           :key="index"
         >
           <el-image
-            class="w-20 h-20 sm:w-24 sm:h-24 block"
+            class="block w-20 h-20 sm:w-24 sm:h-24"
             :src="contact.icon"
             fit="fill"
           ></el-image>
           <div class="text-lg md:text-xl md:pt-3">{{ contact.label }}</div>
-          <div class="text-xl md:text-2xl md:pt-3 truncate w-full">
+          <div class="w-full text-xl truncate md:text-2xl md:pt-3">
             {{ contact.content }}
           </div>
         </div>
@@ -168,7 +168,7 @@ export default {
         {
           icon: require("@/assets/icons/mail.png"),
           label: "邮箱",
-          content: "kyle@linkingend.com"
+          content: "kyle@linkendtech.com"
         },
         {
           icon: require("@/assets/icons/map.png"),

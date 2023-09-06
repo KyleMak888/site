@@ -16,7 +16,7 @@ export default {
         },
         {
           icon: 'message',
-          text: 'kyle@linkingend.com'
+          text: 'kyle@linkendtech.com'
         },
         {
           icon: 'map-location',

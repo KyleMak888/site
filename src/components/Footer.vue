@@ -38,7 +38,7 @@ export default {
   data() {
     return {
       logo: require('@/assets/logo_final_tb.png'),
-      wechatCode: require('@/assets/wechat_qrcode.jpeg'),
+      wechatCode: require('@/assets/wechat_qrcode.png'),
     }
   },
   components: {
