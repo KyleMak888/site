@@ -47,6 +47,10 @@
       <DevFlow></DevFlow>
     </section>
 
+    <section>
+      <AppCaseList></AppCaseList>
+    </section>
+
     <section class="flex flex-wrap items-center py-8 bg">
       <div class="w-1/2 py-10 pl-6 text-2xl text-left text-black sm:w-2/5 sm:text-center sm:pl-0 sm:text-4xl">最新资讯</div>
       <div class="flex-1 px-6 text-left sm:pr-10 sm:pl-0">
@@ -71,6 +75,7 @@
 
 <script>
 import DevFlow from '@/components/DevFlow.vue'
+import AppCaseList from '@/components/AppCaseList.vue'
 import { postList } from '@/posts/postList'
 
 export default {
@@ -85,7 +90,8 @@ export default {
     }
   },
   components: {
-    DevFlow
+    DevFlow,
+    AppCaseList,
   },
   mounted () {
   },
