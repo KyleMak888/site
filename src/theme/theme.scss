@@ -45,7 +45,15 @@ a:active {
   outline: none;
 }
 
-// fix el-image
+// fix element ui
 .el-image.absolute {
   position: absolute;
+}
+.el-card {
+  &.border-none {
+    border-style: none;
+  }
+  &.overflow-visible {
+    overflow: visible;
+  }
 }
