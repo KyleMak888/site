@@ -73,6 +73,14 @@ export default {
           },
           {
             type: "link",
+            text: '3D应用研发',
+            path: '/3d'
+          },
+          {
+            type: 'hr'
+          },
+          {
+            type: "link",
             text: '关于我们',
             path: '/about'
           },

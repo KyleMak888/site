@@ -44,3 +44,8 @@ a:hover,
 a:active {
   outline: none;
 }
+
+// fix el-image
+.el-image.absolute {
+  position: absolute;
+}

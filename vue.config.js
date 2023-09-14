@@ -15,16 +15,16 @@ const vueConfig = {
     disableHostCheck: true,
     host: '0.0.0.0',
     port: '8080',
-    proxy: {
-      '/': {
-        target: BASE_URL,
-        changeOrigin: true,
-        ws: false,
-        pathRewrite: {
-          '^/api': '/api'
-        }
-      }
-    }
+    // proxy: {
+    //   '/': {
+    //     target: BASE_URL,
+    //     changeOrigin: true,
+    //     ws: false,
+    //     pathRewrite: {
+    //       '^/api': '/api'
+    //     }
+    //   }
+    // }
   }
 }
 

@@ -12,7 +12,7 @@ import * as api from '@/api/index'
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.use(VueWow)
-Vue.prototype.$api = api
+// Vue.prototype.$api = api
 
 new Vue({
   router,
