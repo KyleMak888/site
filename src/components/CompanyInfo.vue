@@ -28,7 +28,7 @@ export default {
         },
         {
           icon: 'map-location',
-          text: '广州市白云区天健广场302'
+          text: '广州市白云区天健创意园2栋302A'
         }
       ]
     }

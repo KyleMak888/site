@@ -173,7 +173,7 @@ export default {
         {
           icon: require("@/assets/icons/map.png"),
           label: "联系地址",
-          content: "广州市白云区天健创意园302"
+          content: "广州市白云区天健创意园2栋302A"
         }
       ]
     };

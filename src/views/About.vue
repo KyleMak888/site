@@ -19,7 +19,7 @@
         <div class="w-full lg:w-3/4 text-left lg:pl-36">
           <div class="text-black text-2xl sm:text-4xl font-bold">广州领燕科技有限公司</div>
           <div class="pt-3 sm:pt-6 tracking-wide leading-relaxed">广州领燕科技有限公司是一家致力于移动互联网/创新物联网技术服务的高新技术企业，提供一站式互联网建设服务。业务包括 APP 开发、微信/支付宝/淘宝小程序开发、网站开发、系统开发及物联网研发等。自2015年以来，公司已服务 Nike、Adidas、Burberry、Starbucks、Converse、Lululemon、GOAT、山姆会员商店、宝马等多个世界知名品牌，并成功帮助客户在中国市场赢得巨大的增长。我们追求极致卓越，力求为客户打造最优质的产品，助力客户通过互联网赛道提升自身的盈利能力，实现双赢。</div>
-          <div class="pt-3 text-gray-800 font-bold">地址：广州市白云区天健创意园302</div>
+          <div class="pt-3 text-gray-800 font-bold">地址：广州市白云区天健创意园2栋302A</div>
         </div>
       </div>
 
@@ -91,7 +91,7 @@ export default {
         {
           icon: require('@/assets/icons/map.png'),
           label: '联系地址',
-          content: '广州市白云区天健创意园302'
+          content: '广州市白云区天健创意园2栋302A'
         }
       ]
     }
