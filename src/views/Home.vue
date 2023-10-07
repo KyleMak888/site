@@ -68,8 +68,8 @@
           <el-image class="block w-1/2 h-1/2" :src="logo" fit="fill"></el-image>
         </div>
         <div class="w-full text-left lg:w-3/4 lg:pl-36">
-          <div class="text-2xl font-bold text-black sm:text-4xl">广州领燕科技有限公司</div>
-          <div class="pt-3 leading-relaxed tracking-wide sm:pt-6">广州领燕科技有限公司是一家致力于移动互联网/创新物联网技术服务的高新技术企业，提供一站式互联网建设服务。业务包括 APP 开发、微信/支付宝/淘宝小程序开发、网站开发、系统开发及物联网研发等。自2015年以来，公司已服务 Nike、Adidas、Burberry、Starbucks、Converse、Lululemon、GOAT、山姆会员商店、宝马等多个世界知名品牌，并成功帮助客户在中国市场赢得巨大的增长。我们追求极致卓越，力求为客户打造最优质的产品，助力客户通过互联网赛道提升自身的盈利能力，实现双赢。</div>
+          <h1 class="text-2xl font-bold text-black sm:text-4xl">广州领燕科技有限公司</h1>
+          <div class="pt-3 leading-relaxed tracking-wide sm:pt-6">广州领燕科技有限公司是一家热衷于创新技术服务的企业，我们为品牌和传统企业提供信息化建设和数字化转型的方案咨询，并提供一站式产品研发服务。我们的研发业务包括 APP、小程序、3D应用、H5互动营销页面定制、企业系统及物联网产品等。自2015年以来，我们已服务 Nike、Adidas、Burberry、Starbucks、Converse、Lululemon、GOAT、Tiffany、山姆会员商店、宝马等多个世界知名品牌，并成功帮助客户在中国市场赢得巨大的增长。我们追求极致卓越，力求为客户提供最优质的服务，打造最优质的产品，助力客户落实信息化建设和数字化转型，为其提升自身的盈利能力，实现双赢。</div>
           <div class="pt-3 font-bold text-gray-800">地址：广州市白云区天健创意园2栋302A</div>
         </div>
       </div>
@@ -81,12 +81,12 @@
           <el-image class="block w-1/2 logo-wcl h-1/2" :src="logoWCL" fit="fill"></el-image>
         </div>
         <div class="w-full text-left lg:w-3/4 lg:pl-36">
-          <div class="text-2xl font-bold text-black sm:text-4xl">Wiredcraft</div>
-          <div class="pt-1 leading-relaxed tracking-wide">- Wiredcraft位于上海市中心，主要对接海外客户。</div>
+          <div class="text-2xl font-bold text-black sm:text-4xl">Wiredcraft（合作伙伴）</div>
+          <div class="pt-1 leading-relaxed tracking-wide">- Wiredcraft位于上海市中心，是一家数字应用程序研发商，为企业品牌实现全渠道、跨界或数字化转型方面的策略，发展并建立自己的产品文化。</div>
           <div class="pt-3 leading-relaxed tracking-wide sm:pt-6">
             <a class="link-primary" href="https://wiredcraft.com/" target="_blank">官方网站</a>
           </div>
-          <div class="pt-3 font-bold text-gray-800">地址：上海市延平路121号，15D</div>
+          <div class="pt-3 font-bold text-gray-800">地址：上海市铜仁路258号，4F</div>
         </div>
       </div>
     </section>

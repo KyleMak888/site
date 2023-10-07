@@ -12,7 +12,7 @@
     </section>
 
     <section class="px-6 py-4 text-center sm:py-12 sm:px-24">
-      <h2 class="text-xl font-bold text-primary sm:text-4xl">APP定制开发</h2>
+      <h1 class="text-xl font-bold text-primary sm:text-4xl">APP定制开发</h1>
       <p class="w-4/5 pt-6 mx-auto text-left sm:text-xl"><span v-html="space"></span>如今，手机作为移动终端已成为人们生活中不可替代的一环。在现阶段企业要寻求发展，不想沦为时代的炮灰，就不能故步自封，APP开发上线迫在眉睫。多个案例表明，商用APP会给企业带来更多效益。在传统行业与移动互联网融为一个整体的时候，企业和用户之间将可以非常方便地建立一个良性的闭环。</p>
       <!-- <p class="w-4/5 pt-1 mx-auto text-left sm:text-xl"><span v-html="space"></span>主流的APP运行环境有 iOS系统和 Android系统，最常用的开发技术分为原生开发与混合开发两种。</p> -->
     </section>

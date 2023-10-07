@@ -12,7 +12,7 @@
     </section>
 
     <section class="px-6 py-4 text-center sm:py-12 sm:px-24">
-      <h2 class="text-xl font-bold text-primary sm:text-4xl">小程序定制开发</h2>
+      <h1 class="text-xl font-bold text-primary sm:text-4xl">小程序定制开发</h1>
       <p class="w-4/5 pt-6 mx-auto text-left sm:text-xl"><span v-html="space"></span>小程序是一种不需要下载安装即可使用的应用，它实现了应用“触手可及”的梦想，用户扫一扫或者通过微信首页下拉即可打开应用。也体现了“用完即走”的理念。小程序能够实现消息通知、线下扫码、公众号关联等七大功能。同时，微信小程序更加是推广和营销的优质渠道。</p>
       <p class="w-4/5 pt-1 mx-auto text-left sm:text-xl"><span v-html="space"></span>广州领燕科技深耕微信小程序研发多年，致力于为企业定制专属的小程序应用。我们团队拥有非常丰富的经验和专业知识，基于各个行业和业务场景提供不同的定制研发方案。我们理解客户的需求，将其落地为功能丰富、易于使用的小程序，并确保高质量交付和卓越的用户体验。</p>
     </section>

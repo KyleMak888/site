@@ -12,7 +12,7 @@
     </section>
 
     <section class="px-6 py-4 text-center sm:py-12 sm:px-24">
-      <h2 class="text-xl font-bold text-primary sm:text-4xl">3D应用研发</h2>
+      <h1 class="text-xl font-bold text-primary sm:text-4xl">3D应用研发</h1>
       <p class="w-4/5 pt-6 mx-auto text-left sm:text-xl"><span v-html="space"></span>3D应用研发涉及到多个技术领域，如计算机图形学、计算机视觉、虚拟现实等。领燕科技掌握各种建模工具和渲染引擎，帮助客户创建出逼真的三维场景、角色、特效等。</p>
       <p class="w-4/5 pt-1 mx-auto text-left sm:text-xl"><span v-html="space"></span>同时，3D技术在各个行业中都有着很广泛的应用。比如，在直播行业中，结合AI诞生出了数字人，为主播们带来更丰富的内容与玩法；在建筑和工程领域，帮助设计师和工程师更好地可视化和模拟建筑项目；在医学领域，可以用来进行解剖学教学、手术模拟等。</p>
       <p class="w-4/5 pt-1 mx-auto text-left sm:text-xl"><span v-html="space"></span>随着虚拟现实和人工智能的发展，领燕科技通过丰富的行业知识和多年的技术沉淀与3D相结合，创造出更加智能和具现的应用，为以前我们只能在电影中看到的场景带来落地的可能性。</p>
