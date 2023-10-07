@@ -56,4 +56,16 @@ a:active {
   &.overflow-visible {
     overflow: visible;
   }
+  &.text-primary {
+    color: $primary-color;
+  }
+  &.text-secondary {
+    color: $secondary-color; 
+  }
+  &.bg-primary {
+    background: $primary-color;
+  }
+  &.bg-secondary {
+    background: $secondary-color;
+  }
 }
