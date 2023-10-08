@@ -63,14 +63,14 @@ export default {
           {
             type: 'hr'
           },
-          {
-            type: "link",
-            text: '小程序开发',
-            path: '/mp'
-          },
-          {
-            type: 'hr'
-          },
+          // {
+          //   type: "link",
+          //   text: '小程序开发',
+          //   path: '/mp'
+          // },
+          // {
+          //   type: 'hr'
+          // },
           {
             type: "link",
             text: '3D应用研发',
@@ -81,12 +81,20 @@ export default {
           },
           {
             type: "link",
-            text: '关于我们',
-            path: '/about'
+            text: 'H5互动营销',
+            path: '/marketing'
           },
           {
             type: 'hr'
           },
+          // {
+          //   type: "link",
+          //   text: '关于我们',
+          //   path: '/about'
+          // },
+          // {
+          //   type: 'hr'
+          // },
           {
             type: "button",
             text: '联系我们',
