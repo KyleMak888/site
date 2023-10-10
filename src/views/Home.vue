@@ -149,11 +149,11 @@ export default {
       serviceList: [
         {
           type: '我们的服务',
-          dataList: ['APP及小程序开发', '3D应用定制', '互动营销网页制作']
+          dataList: ['APP及小程序开发', '3D应用定制', '互动营销页面制作']
         },
         {
           type: '数据分析',
-          dataList: ['埋点检测', '洞察发现', '孪生预测']
+          dataList: ['埋点检测', '商业智能', '孪生预测']
         },
         {
           type: '商业资讯',
