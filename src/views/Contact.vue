@@ -71,21 +71,21 @@
         >
           <el-form-item prop="name">
             <div class="font-bold leading-6 text-left text-md">称呼</div>
-            <el-input v-model="form.name" autocomplete="off"></el-input>
+            <el-input v-model="form.name" autocomplete="off" disabled></el-input>
           </el-form-item>
           <el-form-item prop="phone">
             <div class="font-bold leading-6 text-left text-md">电话号码</div>
-            <el-input v-model="form.phone" autocomplete="off"></el-input>
+            <el-input v-model="form.phone" autocomplete="off" disabled></el-input>
           </el-form-item>
           <el-form-item prop="mail">
             <div class="font-bold leading-6 text-left text-md">邮箱</div>
-            <el-input v-model="form.mail" autocomplete="off"></el-input>
+            <el-input v-model="form.mail" autocomplete="off" disabled></el-input>
           </el-form-item>
           <el-form-item prop="company">
             <div class="font-bold leading-6 text-left text-md">
               公司名称(选填)
             </div>
-            <el-input v-model="form.company" autocomplete="off"></el-input>
+            <el-input v-model="form.company" autocomplete="off" disabled></el-input>
           </el-form-item>
           <el-form-item prop="content">
             <div class="font-bold leading-6 text-left text-md">业务需求</div>
@@ -93,6 +93,7 @@
               type="textarea"
               v-model="form.content"
               autocomplete="off"
+              disabled
               rows="5"
             ></el-input>
           </el-form-item>
