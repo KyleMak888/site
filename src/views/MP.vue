@@ -88,6 +88,9 @@ import { postList } from '@/posts/postList'
 
 export default {
   name: 'MP',
+  metaInfo: {
+    title: '小程序定制开发',
+  },
   data() {
     return {
       banner: require('@/assets/mp-banner-bg.jpg'),

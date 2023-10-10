@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Nav class="fixed inset-0 shadow-lg z-50 transform transition-all duration-500 ease-in-out bg-white max-h-16"></Nav>
+    <Nav class="fixed inset-0 z-50 transition-all duration-500 ease-in-out transform bg-white shadow-lg max-h-16"></Nav>
     <div class="w-screen h-16"></div>
     <router-view></router-view>
     <Footer></Footer>
@@ -14,6 +14,10 @@ import Home from '@/views/Home.vue'
 
 export default {
   name: 'App',
+  metaInfo: {
+    title: '首页',
+    titleTemplate: '%s | 领燕科技'
+  },
   components: {
     Nav,
     Footer,

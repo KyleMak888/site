@@ -85,6 +85,10 @@ import { postList } from '@/posts/postList'
 
 export default {
   name: 'Post',
+  metaInfo: {
+    title: '',
+    titleTemplate: null
+  },
   data() {
     return {
       logoFinal: require('@/assets/logo_final.png'),

@@ -133,6 +133,9 @@ import { Message } from 'element-ui';
 
 export default {
   name: "Contact",
+  metaInfo: {
+    title: '联系我们',
+  },
   data() {
     const validateContact = (rule, value, callback) => {
       this.$refs["form"].clearValidate(["phone", "mail"]);

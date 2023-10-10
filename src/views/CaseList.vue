@@ -36,6 +36,9 @@
 <script>
 export default {
   name: 'CaseList',
+  metaInfo: {
+    title: '合作案例',
+  },
   data() {
     return {
       banner: require('@/assets/case-banner-bg.jpg'),

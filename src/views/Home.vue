@@ -131,6 +131,9 @@ import { postList } from '@/posts/postList'
 
 export default {
   name: 'Home',
+  metaInfo: {
+    title: '首页',
+  },
   data() {
     return {
       banner: require('@/assets/home-banner-bg.jpg'),

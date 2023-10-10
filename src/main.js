@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import VueMeta from 'vue-meta'
 import App from './App.vue'
 import router from './router'
 import store from './store'
@@ -10,6 +11,7 @@ import './theme/theme.scss'
 import * as api from '@/api/index'
 
 Vue.config.productionTip = false
+Vue.use(VueMeta)
 Vue.use(ElementUI)
 Vue.use(VueWow)
 // Vue.prototype.$api = api

@@ -107,6 +107,9 @@ import { postList } from '@/posts/postList'
 
 export default {
   name: '3d',
+  metaInfo: {
+    title: '3D应用研发',
+  },
   data() {
     return {
       banner: require('@/assets/3d-banner-bg.jpg'),

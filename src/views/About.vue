@@ -67,6 +67,9 @@ import DevFlow from '@/components/DevFlow.vue'
 
 export default {
   name: 'About',
+  metaInfo: {
+    title: '关于我们',
+  },
   data() {
     return {
       banner: require('@/assets/about-banner-bg.jpg'),

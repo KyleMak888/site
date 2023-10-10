@@ -80,6 +80,9 @@ import { postList } from '@/posts/postList'
 
 export default {
   name: 'App',
+  metaInfo: {
+    title: 'APP定制开发',
+  },
   data() {
     return {
       banner: require('@/assets/app-banner-bg.jpg'),

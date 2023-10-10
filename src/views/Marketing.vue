@@ -95,6 +95,9 @@ import { postList } from '@/posts/postList'
 
 export default {
   name: 'Marketing',
+  metaInfo: {
+    title: 'H5互动营销',
+  },
   data() {
     return {
       banner: require('@/assets/app-banner-bg.jpg'),
