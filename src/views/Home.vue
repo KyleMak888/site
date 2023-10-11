@@ -164,7 +164,7 @@ export default {
       serviceList: [
         {
           type: '我们的服务',
-          dataList: ['APP及小程序开发', '3D应用定制', '互动营销页面制作']
+          dataList: ['APP及小程序开发', '3D应用定制', '互动营销']
         },
         {
           type: '数据分析',
