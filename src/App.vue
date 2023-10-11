@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <Nav class="fixed inset-0 z-50 transition-all duration-500 ease-in-out transform bg-white shadow-lg max-h-16"></Nav>
-    <div class="w-screen h-16"></div>
+    <Nav v-if="showNav" class="fixed inset-0 z-50 transition-all duration-500 ease-in-out transform bg-white shadow-lg max-h-16"></Nav>
+    <div v-if="showNav" class="w-screen h-16"></div>
     <router-view></router-view>
-    <Footer></Footer>
+    <Footer v-if="showFooter"></Footer>
   </div>
 </template>
 
@@ -18,6 +18,12 @@ export default {
     title: '首页',
     titleTemplate: '%s | 领燕科技'
   },
+  data() {
+    return {
+      showNav: this.$route.name != 'NotFound',
+      showFooter: this.$route.name != 'NotFound',
+    }
+  },
   components: {
     Nav,
     Footer,
@@ -25,6 +31,12 @@ export default {
   },
   mounted () {
   },
+  watch: {
+    $route() {
+      this.showNav = this.$route.name != 'NotFound'
+      this.showFooter = this.$route.name != 'NotFound'
+    }
+},
   methods: {
   }
 }
