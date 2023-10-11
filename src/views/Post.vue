@@ -26,7 +26,7 @@
             </div>
           </div>
           <div class="w-full md:w-1/2">
-            <div class="pt-6 text-md">↓↓↓扫码添加微信↓↓↓</div>
+            <div class="pt-6 text-md">↓↓↓掃碼添加微信↓↓↓</div>
             <el-image class="w-32 mt-5" :src="wechatCode" fit="fill"></el-image>
           </div>
         </div>
@@ -60,7 +60,7 @@
     </section>
 
     <section class="flex flex-wrap items-center py-8">
-      <div class="w-1/2 py-10 pl-6 text-2xl text-left text-black sm:w-2/5 sm:text-center sm:pl-0 sm:text-4xl">最新资讯</div>
+      <div class="w-1/2 py-10 pl-6 text-2xl text-left text-black sm:w-2/5 sm:text-center sm:pl-0 sm:text-4xl">最新資訊</div>
       <div class="flex-1 px-6 text-left sm:pr-10 sm:pl-0">
         <el-divider class="mx-auto"></el-divider>
         <div class="post-group">
@@ -89,6 +89,23 @@ export default {
     title: '',
     titleTemplate: null
   },
+  metaInfo() {
+    return {
+      title: this.postList[this.id].title,
+      meta: [
+        {
+          property: 'og:title',
+          vmid: 'og:title',
+          content: this.postList[this.id].title,
+        },
+        {
+          vmid: 'description',
+          name: 'description',
+          content: this.getMetaInfoDescription(),
+        }
+      ]
+    }
+  },
   data() {
     return {
       logoFinal: require('@/assets/logo_final.png'),
@@ -106,6 +123,18 @@ export default {
     VueCodeHighlight,
   },
   methods: {
+    getMetaInfoDescription() {
+      switch (this.id) {
+        case 0:
+          return '美国东部时间 2 月 8 日，Rust 基金会 宣布 正式成立。  Rust 基金会是一个新的独立的非盈利组织，负责管理Rust编程语言及生态。该组织将致力于为那些管理和开发该项目的维护者提供支持。Rust 基金会将于美东时间 2 月 9 日下午 4 点举行第一次董事会会议。'
+        case 1:
+          return 'Backend For Frontend，即服务于前端的后端。  面对越来越复杂的多端应用的需求，后端提供的 RESTful 接口形式难以应对多变的页面需求，这时候需要一层专门的 BFF 层来弥合这部分差异。  例如同样一个商品详情页，在 App 端上和 PC 端上，两者的展示样式就有很多的不同。以往前后端分离的方式可能有几种做法。'
+        case 2:
+          return '作为技术负责人，如何从0搭建公司后端技术栈。  今天要说的后台是大后台的概念，放在服务器上的东西都属于后台的东西，比如使用的框架，语言，数据库，服务，操作系统等等。'
+        default:
+          return this.postList[this.id].title
+      }
+    },
     tapToPost(id) {
       this.$router.push({
         name: 'Post',

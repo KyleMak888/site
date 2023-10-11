@@ -82,6 +82,18 @@ export default {
   name: 'App',
   metaInfo: {
     title: 'APP定制开发',
+    meta: [
+      {
+        property: 'og:title',
+        vmid: 'og:title',
+        content: 'APP定制开发',
+      },
+      {
+        vmid: 'description',
+        name: 'description',
+        content: '如今，手机作为移动终端已成为人们生活中不可替代的一环。在现阶段企业要寻求发展，不想沦为时代的炮灰，就不能故步自封，APP开发上线迫在眉睫。多个案例表明，商用APP会给企业带来更多效益。在传统行业与移动互联网融为一个整体的时候，企业和用户之间将可以非常方便地建立一个良性的闭环。',
+      }
+    ]
   },
   data() {
     return {

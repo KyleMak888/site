@@ -135,6 +135,18 @@ export default {
   name: "Contact",
   metaInfo: {
     title: '联系我们',
+    meta: [
+      {
+        property: 'og:title',
+        vmid: 'og:title',
+        content: '联系我们',
+      },
+      {
+        vmid: 'description',
+        name: 'description',
+        content: '广州领燕科技有限公司是一家热衷于创新技术服务的企业，我们为品牌和传统企业提供信息化建设和数字化转型的方案咨询，并提供一站式产品研发服务。我们的研发业务包括 APP、小程序、3D应用、H5互动营销页面定制、企业系统及物联网产品等。自2015年以来，我们已服务 Nike、Adidas、Burberry、Starbucks、Converse、Lululemon、GOAT、Tiffany、山姆会员商店、宝马等多个世界知名品牌，并成功帮助客户在中国市场赢得巨大的增长。我们追求极致卓越，力求为客户提供最优质的服务，打造最优质的产品，助力客户落实信息化建设和数字化转型，为其提升自身的盈利能力，实现双赢。'
+      }
+    ]
   },
   data() {
     const validateContact = (rule, value, callback) => {

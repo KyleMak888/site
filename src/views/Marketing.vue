@@ -97,6 +97,18 @@ export default {
   name: 'Marketing',
   metaInfo: {
     title: 'H5互动营销',
+    meta: [
+      {
+        property: 'og:title',
+        vmid: 'og:title',
+        content: 'H5互动营销',
+      },
+      {
+        vmid: 'description',
+        name: 'description',
+        content: '品牌离不开营销，领燕科技结合品牌元素，为各类品牌提供营销活动页面的设计和研发服务。H5互动营销比起传统的广告投放具有自发裂变的优势，用户可以通过打卡或者将互动结果分享到社交媒体上，从而吸引更多的用户参与到活动中来。H5互动营销可以收集用户的行为数据，通过分析这些数据可以了解用户的兴趣和喜好，从而精准地进行销售和推广。这种数据驱动的营销方式可以大大提高品牌的转化率和ROI。',
+      }
+    ]
   },
   data() {
     return {
