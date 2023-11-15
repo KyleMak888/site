@@ -1,0 +1,9 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <url><loc>https://site.linkendtech.com//</loc></url>
+    <url><loc>https://site.linkendtech.com//app</loc></url>
+    <url><loc>https://site.linkendtech.com//mp</loc></url>
+    <url><loc>https://site.linkendtech.com//3d</loc></url>
+    <url><loc>https://site.linkendtech.com//marketing</loc></url>
+    <url><loc>https://site.linkendtech.com//contact</loc></url>
+    <url><loc>https://site.linkendtech.com//post/:id</loc></url>
+</urlset>
