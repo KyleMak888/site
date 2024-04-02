@@ -189,7 +189,7 @@ export default {
         {
           icon: require("@/assets/icons/map.png"),
           label: "联系地址",
-          content: "广州市白云区天健创意园2栋302A"
+          content: "广州市天河区林和中路188号附楼三楼A之E45"
         }
       ]
     };

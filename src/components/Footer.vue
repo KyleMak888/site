@@ -23,7 +23,7 @@
       align="center"
       class="py-3"
     >
-      <div class="text-white">© 2020 - 2021 广州领燕科技有限公司</div>
+      <div class="text-white">© 2024 <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2022012773号-1</a></div>
     </FlexBox>
   </div>
 </template>
