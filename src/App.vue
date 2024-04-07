@@ -15,8 +15,8 @@ import Home from '@/views/Home.vue'
 export default {
   name: 'App',
   metaInfo: {
-    title: '领燕科技官网',
-    titleTemplate: '领燕科技官网'
+    title: '广州领燕科技有限公司',
+    titleTemplate: '广州领燕科技有限公司'
   },
   data() {
     return {
