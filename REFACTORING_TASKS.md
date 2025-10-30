@@ -44,14 +44,14 @@
 
 ### ✅ Task 2.2: 基础 UI 组件
 - [x] Button 组件（多种变体：primary, secondary, outline）
-- [ ] Card 组件
+- [x] Card 组件
 - [x] Section/Container 组件
-- [ ] Badge/Tag 组件
+- [x] Badge/Tag 组件
 - [ ] Icon 系统（Heroicons 或自定义）
 
 ### ✅ Task 2.3: 数据展示组件
-- [ ] Stats/KPI 数字组件（动画数字）
-- [ ] 客户 Logo 墙组件
+- [x] Stats/KPI 数字组件（基础版本完成，动画待补充）
+- [x] 客户 Logo 墙组件
 - [ ] Testimonial/Quote 组件
 - [ ] 行业徽章组件
 - [ ] Case Study 卡片组件
@@ -69,15 +69,15 @@
 - [x] 底部 CTA Section
 
 ### ✅ Task 3.2: 服务页面 (/services)
-- [ ] 服务总览页（/services）
-- [ ] 品牌与活动页（/services/brand-marketing）
-- [ ] 数字产品页（/services/digital-product）
-- [ ] 数据与营销技术页（/services/data-martech）
-- [ ] 统一页面模板（结构：痛点 → 方案 → 案例 → CTA）
+- [x] 服务总览页（/services）
+- [x] 品牌与活动页（/services/brand-marketing）
+- [x] 数字产品页（/services/digital-product）
+- [x] 数据与营销技术页（/services/data-martech）
+- [x] 统一页面模板（结构：痛点 → 方案 → 案例 → CTA）
 
 ### ✅ Task 3.3: 案例页面 (/work)
-- [ ] 案例列表页（/work）- 支持筛选（行业、目标、技术）
-- [ ] 案例详情页模板（/work/[slug]）
+- [x] 案例列表页（/work）- 支持筛选（行业、目标、技术）*（基础列表完成，筛选待实现）*
+- [x] 案例详情页模板（/work/[slug]）
   - 项目概述（客户、行业、目标）
   - 痛点分析
   - 解决方案（Content × Tech × Data）
@@ -87,11 +87,11 @@
   - 相关案例推荐
 
 ### ✅ Task 3.4: 关于页面 (/about)
-- [ ] 公司定位与价值主张
-- [ ] 方法论展示（Content · Tech · Data）
+- [x] 公司定位与价值主张
+- [x] 方法论展示（Content · Tech · Data）
 - [ ] 团队介绍（可选）
-- [ ] 合作流程
-- [ ] 客户与合作伙伴
+- [x] 合作流程
+- [x] 客户与合作伙伴
 
 ### ✅ Task 3.5: 洞察/博客页面 (/insights)
 - [ ] 文章列表页（分类、标签筛选）
@@ -101,8 +101,8 @@
 - [ ] 作者信息
 
 ### ✅ Task 3.6: 联系页面 (/contact)
-- [ ] 联系表单（姓名、邮箱、公司、预算档位）
-- [ ] 多通道联系方式（Messenger/WhatsApp/邮件）
+- [x] 联系表单（姓名、邮箱、公司、预算档位）
+- [x] 多通道联系方式（Messenger/WhatsApp/邮件）*（目前提供邮箱、电话、微信二维码）*
 - [ ] 可选：嵌入 Calendly 预约组件
 - [ ] 成功页/Thank You 页（提供 PDF 案例摘要下载）
 
@@ -116,21 +116,21 @@
 ## 阶段 4: 转化优化 / Phase 4: Conversion Optimization
 
 ### ✅ Task 4.1: CTA 系统
-- [ ] 双 CTA 组件（获取案例包 + 预约咨询）
-- [ ] 固定 CTA 按钮（首屏 + 页脚 + 浮动按钮）
+- [x] 双 CTA 组件（获取案例包 + 预约咨询）
+- [x] 固定 CTA 按钮（首屏 + 页脚）*（浮动按钮待实现）*
 - [ ] CTA 事件追踪
 
 ### ✅ Task 4.2: 表单与提交
 - [ ] 表单验证（React Hook Form + Zod）
-- [ ] 最少字段设计
-- [ ] 表单提交 API 路由
-- [ ] 成功/失败状态处理
+- [x] 最少字段设计
+- [x] 表单提交 API 路由
+- [x] 成功/失败状态处理
 - [ ] PDF 案例摘要生成或链接
 
 ### ✅ Task 4.3: CRM 集成
-- [ ] HubSpot/Zoho/自研 CRM 集成
-- [ ] 表单数据同步
-- [ ] UTM 参数捕获
+- [x] HubSpot/Zoho/自研 CRM 集成 *（已实现自研 CRM，JSON 文件存储）*
+- [x] 表单数据同步
+- [x] UTM 参数捕获
 - [ ] 会话 ID 追踪
 
 ---
@@ -138,11 +138,11 @@
 ## 阶段 5: SEO 与性能优化 / Phase 5: SEO & Performance
 
 ### ✅ Task 5.1: 技术 SEO
-- [ ] 元标签配置（每页独立 title, description）
-- [ ] Open Graph 标签
+- [x] 元标签配置（每页独立 title, description）
+- [x] Open Graph 标签 *（案例详情页已实现）*
 - [ ] Twitter Card 标签
-- [ ] Sitemap 生成（sitemap.xml）
-- [ ] Robots.txt 配置
+- [x] Sitemap 生成（sitemap.xml）
+- [x] Robots.txt 配置
 - [ ] Canonical URLs
 
 ### ✅ Task 5.2: 结构化数据 (JSON-LD)
@@ -152,7 +152,7 @@
 - [ ] Project/CreativeWork Schema（案例）
 
 ### ✅ Task 5.3: 图片与媒体优化
-- [ ] 使用 Next/Image 组件
+- [x] 使用 Next/Image 组件
 - [ ] 图片自适应尺寸（srcset）
 - [ ] WebP/AVIF 格式
 - [ ] 懒加载与优先加载
@@ -161,7 +161,7 @@
 ### ✅ Task 5.4: 性能优化
 - [ ] 代码分割与动态导入
 - [ ] 字体优化（next/font）
-- [ ] 首屏渲染优化（SSR/SSG）
+- [x] 首屏渲染优化（SSR/SSG）
 - [ ] Core Web Vitals 监控
   - LCP ≤ 2.5s
   - FID/INP ≤ 200ms
@@ -172,27 +172,27 @@
 ## 阶段 6: CMS 集成 / Phase 6: CMS Integration
 
 ### ✅ Task 6.1: 选择与配置 CMS
-- [ ] 选择 headless CMS（Sanity/Contentful/Strapi）
-- [ ] 配置 CMS 项目
-- [ ] API 密钥与环境变量
+- [x] 选择 headless CMS（Sanity/Contentful/Strapi）*（已实现基于 JSON 文件的简单 CMS）*
+- [x] 配置 CMS 项目
+- [x] API 密钥与环境变量
 
 ### ✅ Task 6.2: 内容模型设计
-- [ ] Service 模型（服务类型、描述、案例引用）
-- [ ] Case 模型（客户、行业、目标、方案、成效、技术栈、截图）
+- [x] Service 模型（服务类型、描述、案例引用）
+- [x] Case 模型（客户、行业、目标、方案、成效、技术栈、截图）
 - [ ] Insight/Article 模型（标题、内容、作者、标签、发布日期）
 - [ ] Author 模型
 - [ ] Tag/Category 模型
 
 ### ✅ Task 6.3: CMS 集成
-- [ ] 创建 CMS 客户端（SDK/API）
-- [ ] 数据获取函数（getServices, getCases, getInsights）
+- [x] 创建 CMS 客户端（SDK/API）*（基于 JSON 文件的 loader）*
+- [x] 数据获取函数（getServices, getCases, getInsights）*（已实现 services/cases，Insights 待补充）*
 - [ ] ISR 配置（Incremental Static Regeneration）
-- [ ] 页面与 CMS 数据绑定
+- [x] 页面与 CMS 数据绑定
 
 ### ✅ Task 6.4: 内容迁移
-- [ ] 从 Vue 项目提取现有内容
-- [ ] 导入到 CMS
-- [ ] 验证数据完整性
+- [x] 从 Vue 项目提取现有内容
+- [x] 导入到 CMS
+- [x] 验证数据完整性
 
 ---
 

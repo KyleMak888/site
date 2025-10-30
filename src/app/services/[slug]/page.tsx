@@ -6,7 +6,7 @@ import { Container, SectionHeading, Button } from "@/components/ui";
 import { getHomeData, getAllCases } from "@/lib/cms/loader";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateStaticParams() {
@@ -17,7 +17,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = params;
+  const { slug } = await params;
   const data = getHomeData();
   const service = data.services.find((s) => s.slug === slug);
 
@@ -31,8 +31,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function ServiceDetailPage({ params }: Props) {
-  const { slug } = params;
+export default async function ServiceDetailPage({ params }: Props) {
+  const { slug } = await params;
   const data = getHomeData();
   const service = data.services.find((s) => s.slug === slug);
 

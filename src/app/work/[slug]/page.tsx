@@ -7,7 +7,7 @@ import { getAllCases, getCaseBySlug } from "@/lib/cms/loader";
 import type { CaseStudy } from "@/types";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateStaticParams() {
@@ -18,7 +18,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = params;
+  const { slug } = await params;
   const caseStudy = getCaseBySlug(slug) as CaseStudy | null;
 
   if (!caseStudy) {
@@ -38,8 +38,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function CaseDetailPage({ params }: Props) {
-  const { slug } = params;
+export default async function CaseDetailPage({ params }: Props) {
+  const { slug } = await params;
   const caseStudy = getCaseBySlug(slug) as CaseStudy | null;
 
   if (!caseStudy) {
