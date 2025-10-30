@@ -100,8 +100,10 @@ export default async function CaseDetailPage({ params }: Props) {
                 src={caseStudy.coverImage}
                 alt={caseStudy.title}
                 fill
-                className="object-cover"
                 priority
+                quality={90}
+                sizes="(min-width: 1280px) 80vw, 95vw"
+                className="object-cover"
               />
             </div>
           </Container>
@@ -207,6 +209,9 @@ export default async function CaseDetailPage({ params }: Props) {
                       src={related.coverImage ?? "/images/case/app-booking.png"}
                       alt={related.title}
                       fill
+                      loading="lazy"
+                      quality={80}
+                      sizes="(min-width: 1024px) 50vw, 100vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>

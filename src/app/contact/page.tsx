@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { Container, SectionHeading } from "@/components/ui";
-import { ContactForm } from "@/components/sections/contact-form";
+
+const ContactForm = dynamic(
+  () => import("@/components/sections/contact-form").then((mod) => mod.ContactForm),
+  { loading: () => <div className="rounded-2xl bg-white p-8 shadow-md">加载表单中...</div> }
+);
 
 export const metadata: Metadata = {
   title: "联系我们",

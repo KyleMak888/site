@@ -1,12 +1,24 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Noto_Sans_SC } from "next/font/google";
 import "./globals.css";
 import { Header, Footer } from "@/components/layout";
+import { WebVitals } from "@/components/web-vitals";
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
+  preload: true,
+  fallback: ["system-ui", "arial"],
+});
+
+const notoSansSC = Noto_Sans_SC({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-noto-sans-sc",
+  weight: ["300", "400", "500", "700"],
+  preload: true,
+  fallback: ["sans-serif"],
 });
 
 export const metadata: Metadata = {
@@ -83,8 +95,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN" className={inter.variable}>
-      <body className="antialiased">
+    <html lang="zh-CN" className={`${inter.variable} ${notoSansSC.variable}`}>
+      <body className="font-sans antialiased">
+        <WebVitals />
         <Header />
         {children}
         <Footer />

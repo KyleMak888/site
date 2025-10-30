@@ -153,16 +153,16 @@
 
 ### ✅ Task 5.3: 图片与媒体优化
 - [x] 使用 Next/Image 组件
-- [ ] 图片自适应尺寸（srcset）
-- [ ] WebP/AVIF 格式
-- [ ] 懒加载与优先加载
+- [x] 图片自适应尺寸（srcset）*（通过 sizes 属性实现）*
+- [x] WebP/AVIF 格式 *（自动转换）*
+- [x] 懒加载与优先加载 *（priority/loading="lazy"）*
 - [ ] 视频延迟加载
 
 ### ✅ Task 5.4: 性能优化
-- [ ] 代码分割与动态导入
-- [ ] 字体优化（next/font）
+- [x] 代码分割与动态导入 *（Contact Form 动态加载）*
+- [x] 字体优化（next/font）
 - [x] 首屏渲染优化（SSR/SSG）
-- [ ] Core Web Vitals 监控
+- [x] Core Web Vitals 监控 *（WebVitals 组件）*
   - LCP ≤ 2.5s
   - FID/INP ≤ 200ms
   - CLS ≤ 0.1

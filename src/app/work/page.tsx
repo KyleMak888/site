@@ -60,6 +60,9 @@ export default function WorkPage() {
                     src={caseStudy.coverImage ?? "/images/case/app-booking.png"}
                     alt={caseStudy.title}
                     fill
+                    loading="lazy"
+                    quality={85}
+                    sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   {caseStudy.featured && (

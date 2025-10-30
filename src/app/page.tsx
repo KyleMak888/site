@@ -23,6 +23,8 @@ export default function Home() {
             alt="广州联恩科技 - 品牌与数字产品背景"
             fill
             priority
+            quality={85}
+            sizes="100vw"
             className="object-cover"
           />
           <div className="absolute inset-0 bg-white/85 backdrop-blur-[1px]" />
@@ -114,6 +116,8 @@ export default function Home() {
                   alt={client.name}
                   width={120}
                   height={48}
+                  loading="lazy"
+                  quality={75}
                   className="h-12 w-auto object-contain opacity-60 transition-opacity hover:opacity-100"
                 />
               </div>
@@ -142,6 +146,9 @@ export default function Home() {
                     src={caseStudy.coverImage ?? "/images/case/app-booking.png"}
                     alt={caseStudy.title}
                     fill
+                    loading="lazy"
+                    quality={85}
+                    sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
