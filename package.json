@@ -1,35 +1,27 @@
 {
-  "name": "site",
-  "version": "1.0.0",
+  "name": "linkend-website",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "axios": "^0.24.0",
-    "core-js": "^3.6.5",
-    "element-ui": "^2.15.0",
-    "vue": "^2.6.11",
-    "vue-code-highlight": "^0.7.8",
-    "vue-meta": "^2.4.0",
-    "vue-navigation-bar": "^4.1.0",
-    "vue-router": "^3.2.0",
-    "vue-wow": "^1.2.0",
-    "vuex": "^3.4.0"
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "next": "16.0.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-plugin-vuex": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "sass": "^1.26.5",
-    "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@tailwindcss/postcss": "^4",
+    "tailwindcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.1"
+  }
 }
