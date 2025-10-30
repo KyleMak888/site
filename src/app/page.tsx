@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Button, Container, SectionHeading } from "@/components/ui";
 import { hero, stats, clients, featuredCases, services } from "@/lib/data/home";
@@ -13,19 +14,34 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative flex min-h-[90vh] items-center justify-center bg-gradient-to-b from-white to-gray-50">
-        <Container className="py-24 text-center">
-          <h1 className="mb-6 text-5xl font-bold tracking-tight text-gray-900 md:text-6xl lg:text-7xl">
+      <section className="relative flex min-h-[90vh] items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src={hero.backgroundImage}
+            alt="广州联恩科技 - 品牌与数字产品背景"
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-white/85 backdrop-blur-[1px]" />
+        </div>
+        <Container className="py-28 text-center">
+          <p className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/80 px-6 py-2 text-sm font-medium text-primary shadow-lg shadow-primary/10 ring-1 ring-primary/20">
+            内容 × 技术 × 数据
+            <span className="h-1 w-1 rounded-full bg-primary"></span>
+            可量化的增长伙伴
+          </p>
+          <h1 className="mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-6xl lg:text-7xl">
             {hero.titleZh.split("与")[0]}
             <br />
             <span className="text-primary">与{hero.titleZh.split("与")[1]}</span>
           </h1>
 
-          <p className="mb-4 text-xl text-gray-600 md:text-2xl">
+          <p className="mb-6 text-lg text-gray-600 md:text-xl">
             {hero.titleEn}
           </p>
 
-          <p className="mb-12 text-lg text-gray-700">
+          <p className="mb-12 text-lg text-gray-700 md:text-xl">
             <span className="font-semibold">{hero.valueProposition}</span>
           </p>
 
@@ -91,7 +107,13 @@ export default function Home() {
                 key={client.id}
                 className="flex items-center justify-center rounded-2xl border border-gray-200 bg-white p-6 transition-all hover:shadow-md"
               >
-                <div className="h-12 w-full rounded bg-gray-200"></div>
+                <Image
+                  src={client.logo}
+                  alt={client.name}
+                  width={120}
+                  height={48}
+                  className="h-12 w-auto object-contain opacity-60 transition-opacity hover:opacity-100"
+                />
               </div>
             ))}
           </div>
@@ -111,24 +133,29 @@ export default function Home() {
               <Link
                 key={caseStudy.id}
                 href={`/work/${caseStudy.slug}`}
-                className="group overflow-hidden rounded-2xl bg-white shadow-lg transition-all hover:shadow-2xl"
+                className="group overflow-hidden rounded-2xl bg-white shadow-lg transition-all hover:-translate-y-1 hover:shadow-2xl"
               >
-                <div className="h-48 bg-gradient-to-br from-primary/10 to-primary/5"></div>
+                <div className="relative h-52 w-full overflow-hidden">
+                  <Image
+                    src={caseStudy.coverImage ?? "/images/case/app-booking.png"}
+                    alt={caseStudy.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
                 <div className="p-6">
-                  <div className="mb-2 text-sm font-medium text-primary">
+                  <div className="mb-2 inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
                     {caseStudy.industry}
+                    <span className="h-1 w-1 rounded-full bg-primary"></span>
+                    {caseStudy.technologies?.[0]}
                   </div>
                   <h3 className="mb-2 text-xl font-bold text-gray-900 transition-colors group-hover:text-primary">
                     {caseStudy.title}
                   </h3>
-                  <p className="mb-4 text-gray-600">{caseStudy.summary}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-500">
-                      {caseStudy.duration}
-                    </span>
-                    <span className="text-sm font-medium text-primary">
-                      查看详情 →
-                    </span>
+                  <p className="mb-4 text-gray-600 line-clamp-3">{caseStudy.summary}</p>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-500">{caseStudy.duration}</span>
+                    <span className="font-medium text-primary">查看详情 →</span>
                   </div>
                 </div>
               </Link>

@@ -1,9 +1,11 @@
 import type { CaseStudy, Service } from "@/types";
+export { clients } from "./clients";
 
 export const hero = {
   titleZh: "技术驱动的品牌营销与数字产品",
   titleEn: "Tech-powered brand marketing & product development",
   valueProposition: "内容 × 技术 × 数据，持续交付可量化增长",
+  backgroundImage: "/images/home-banner-bg.jpg",
   primaryCta: {
     label: "获取案例包",
     href: "#cases",
@@ -35,80 +37,71 @@ export const stats = [
   },
 ] as const;
 
-export const clients = [
-  { id: "client-1", name: "Brand A" },
-  { id: "client-2", name: "Brand B" },
-  { id: "client-3", name: "Brand C" },
-  { id: "client-4", name: "Brand D" },
-  { id: "client-5", name: "Brand E" },
-  { id: "client-6", name: "Brand F" },
-] as const;
-
 export const featuredCases: CaseStudy[] = [
   {
-    id: "case-1",
-    title: "国际品牌数字化转型",
-    titleEn: "Digital Transformation for Global Retail",
-    client: "全球零售品牌",
+    id: "case-sams-club",
+    title: "山姆会员商店小程序",
+    titleEn: "Sam's Club Mini Program",
+    client: "山姆会员商店",
     industry: "零售行业",
     industryEn: "Retail",
-    slug: "global-retail-digital-transformation",
-    summary: "通过小程序 + 私域运营，实现线上销售额 3 个月增长 200%",
+    slug: "sams-club-mini-program",
+    summary: "为山姆会员商店打造高性能小程序，提升会员购物体验",
     summaryEn:
-      "Implemented mini-programs and private domain operations to achieve 200% online sales growth in 3 months.",
-    challenge: "多渠道下的用户触达与运营效率低",
-    solution: "整合内容体系与营销技术，实现用户全生命周期运营",
+      "Built a high-performance mini-program for Sam's Club to enhance member shopping experience.",
+    challenge: "大流量高并发场景下的性能优化",
+    solution: "技术架构优化与用户体验设计",
     results: [
-      { metric: "转化率", value: "+180%" },
-      { metric: "线上销售额", value: "+200%" },
+      { metric: "页面加载速度", value: "-60%" },
+      { metric: "会员满意度", value: "+45%" },
     ],
-    technologies: ["Next.js", "WeChat Mini Program", "Segment"],
-    duration: "2 个月",
-    coverImage: "/images/cases/retail.jpg",
-    featured: true,
-  },
-  {
-    id: "case-2",
-    title: "金融产品营销活动",
-    titleEn: "Fintech Product Launch",
-    client: "金融科技企业",
-    industry: "金融科技",
-    industryEn: "Fintech",
-    slug: "fintech-product-launch",
-    summary: "数据驱动的精准投放，CPL 降低 45%，ROI 提升 3 倍",
-    summaryEn:
-      "Data-driven performance marketing reduced CPL by 45% and improved ROI by 3x.",
-    challenge: "获客成本高，转化链路断层",
-    solution: "构建营销数据平台，实时监测关键指标并优化投放",
-    results: [
-      { metric: "CPL", value: "-45%" },
-      { metric: "ROI", value: "×3" },
-    ],
-    technologies: ["HubSpot", "Looker", "Meta Ads"],
-    duration: "1 个月",
-    coverImage: "/images/cases/fintech.jpg",
-    featured: true,
-  },
-  {
-    id: "case-3",
-    title: "在线教育平台搭建",
-    titleEn: "EdTech Platform Build",
-    client: "教育科技公司",
-    industry: "教育行业",
-    industryEn: "Education",
-    slug: "edtech-platform-build",
-    summary: "从 0 到 1 搭建 SaaS 平台，支撑 10 万+ 用户并发访问",
-    summaryEn:
-      "Built an EdTech SaaS platform from 0 to 1, supporting 100k+ concurrent users.",
-    challenge: "平台稳定性与用户体验无法满足增长",
-    solution: "重构架构，引入数据驱动的学习路径与增长体系",
-    results: [
-      { metric: "活跃用户", value: "+120%" },
-      { metric: "留存率", value: "+35%" },
-    ],
-    technologies: ["Next.js", "Node.js", "AWS"],
+    technologies: ["WeChat Mini Program", "React", "Node.js"],
     duration: "3 个月",
-    coverImage: "/images/cases/edtech.jpg",
+    coverImage: "/images/case/app-sams-club.png",
+    featured: true,
+  },
+  {
+    id: "case-jewelry-ecom",
+    title: "珠宝电商小程序",
+    titleEn: "Jewelry E-commerce App",
+    client: "奢侈品珠宝品牌",
+    industry: "奢侈品",
+    industryEn: "Luxury",
+    slug: "jewelry-ecommerce-app",
+    summary: "打造高端珠宝线上销售平台，融合3D展示与AR试戴功能",
+    summaryEn:
+      "Created a luxury jewelry e-commerce platform with 3D visualization and AR try-on features.",
+    challenge: "如何在线上还原奢侈品的高端体验",
+    solution: "3D建模 + AR技术 + 精致UI设计",
+    results: [
+      { metric: "线上转化率", value: "+180%" },
+      { metric: "客单价", value: "+90%" },
+    ],
+    technologies: ["WeChat Mini Program", "Three.js", "AR Kit"],
+    duration: "4 个月",
+    coverImage: "/images/case/app-jewelry-ecom.png",
+    featured: true,
+  },
+  {
+    id: "case-booking-app",
+    title: "预约服务应用",
+    titleEn: "Booking Service App",
+    client: "服务行业连锁品牌",
+    industry: "服务行业",
+    industryEn: "Service",
+    slug: "booking-service-app",
+    summary: "智能预约系统，优化用户预约流程，提升门店运营效率",
+    summaryEn:
+      "Intelligent booking system that optimizes appointment process and improves store operations.",
+    challenge: "多门店预约管理与用户体验优化",
+    solution: "智能排班算法 + 实时库存管理",
+    results: [
+      { metric: "预约效率", value: "+200%" },
+      { metric: "门店利用率", value: "+35%" },
+    ],
+    technologies: ["React Native", "Node.js", "MongoDB"],
+    duration: "2 个月",
+    coverImage: "/images/case/app-booking.png",
     featured: true,
   },
 ];
@@ -123,6 +116,7 @@ export const services: Service[] = [
     descriptionEn:
       "Brand strategy, creative content, campaign planning and execution for impactful brand experiences.",
     slug: "brand-marketing",
+    icon: "/images/marketing-gift-card.png",
     features: [
       "品牌定位与叙事",
       "整合营销活动",
@@ -138,6 +132,7 @@ export const services: Service[] = [
     descriptionEn:
       "Design and development of websites, mini-programs, mobile apps, and SaaS platforms.",
     slug: "digital-product",
+    icon: "/images/3d-screen.png",
     features: [
       "产品策略与原型设计",
       "全栈开发",
@@ -154,6 +149,7 @@ export const services: Service[] = [
     descriptionEn:
       "MarTech consulting, data analytics, and growth strategy enabling measurable outcomes.",
     slug: "data-martech",
+    icon: "/images/marketing-data-dashboard.png",
     features: [
       "MarTech 体系搭建",
       "数据仪表盘与分析",
