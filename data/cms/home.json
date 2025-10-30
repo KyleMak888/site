@@ -50,7 +50,11 @@
     { "id": "wcl", "name": "WCL", "logo": "/images/logo/wcl.svg" },
     { "id": "xyy", "name": "XYY", "logo": "/images/logo/xyy.png" }
   ],
-  "featuredCases": "cases.json",
+  "featuredCaseSlugs": [
+    "sams-club-mini-program",
+    "jewelry-ecommerce-app",
+    "booking-service-app"
+  ],
   "services": [
     {
       "id": "brand-marketing",

@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import type { CaseStudy, HomeCmsData, HomeContent } from "@/types";
 
 const DATA_DIR = path.join(process.cwd(), "data", "cms");
 
@@ -34,29 +35,48 @@ export function saveData<T>(filename: string, data: T): void {
 /**
  * 获取所有案例
  */
-export function getAllCases() {
-  return loadData("cases.json");
+export function getAllCases(): CaseStudy[] {
+  return loadData<CaseStudy[]>("cases.json");
 }
 
 /**
  * 获取单个案例
  */
-export function getCaseBySlug(slug: string) {
+export function getCaseBySlug(slug: string): CaseStudy | null {
   const cases = getAllCases();
-  return Array.isArray(cases) ? cases.find((c: any) => c.slug === slug) : null;
+  return cases.find((c) => c.slug === slug) ?? null;
 }
 
 /**
  * 获取精选案例
  */
-export function getFeaturedCases() {
-  const cases = getAllCases();
-  return Array.isArray(cases) ? cases.filter((c: any) => c.featured) : [];
+export function getFeaturedCases(): CaseStudy[] {
+  return getAllCases().filter((c) => c.featured);
 }
 
 /**
- * 获取首页数据
+ * 获取首页原始数据
  */
-export function getHomeData() {
-  return loadData("home.json");
+export function getHomeData(): HomeCmsData {
+  return loadData<HomeCmsData>("home.json");
+}
+
+/**
+ * 获取首页内容（解析后的数据）
+ */
+export function getHomeContent(): HomeContent {
+  const data = getHomeData();
+  const allCases = getAllCases();
+
+  const featuredCases = (data.featuredCaseSlugs || [])
+    .map((slug) => allCases.find((item) => item.slug === slug))
+    .filter((item): item is CaseStudy => Boolean(item));
+
+  return {
+    hero: data.hero,
+    stats: data.stats,
+    clients: data.clients,
+    services: data.services,
+    featuredCases,
+  };
 }

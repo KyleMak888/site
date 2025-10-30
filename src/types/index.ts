@@ -36,6 +36,8 @@ export interface CaseStudy {
   images?: string[];
   coverImage?: string;
   featured?: boolean;
+  publishedAt?: string;
+  tags?: string[];
 }
 
 // 案例成果
@@ -78,7 +80,7 @@ export interface HomeCmsData {
   hero: HeroContent;
   stats: StatItem[];
   clients: ClientLogo[];
-  featuredCases: CaseStudy[] | string;
+  featuredCaseSlugs?: string[];
   services: Service[];
 }
 
