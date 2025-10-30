@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Button, Container, SectionHeading } from "@/components/ui";
-import { hero, stats, clients, featuredCases, services } from "@/lib/data/home";
+import { getHomeContent } from "@/lib/cms/loader";
 
 export const metadata: Metadata = {
   title: "首页",
@@ -11,6 +11,8 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  const { hero, stats, clients, featuredCases, services } = getHomeContent();
+
   return (
     <main>
       {/* Hero Section */}
@@ -27,22 +29,22 @@ export default function Home() {
         </div>
         <Container className="py-28 text-center">
           <p className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/80 px-6 py-2 text-sm font-medium text-primary shadow-lg shadow-primary/10 ring-1 ring-primary/20">
-            内容 × 技术 × 数据
+            {hero.badgeLabel}
             <span className="h-1 w-1 rounded-full bg-primary"></span>
-            可量化的增长伙伴
+            {hero.badgeCaption}
           </p>
           <h1 className="mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-6xl lg:text-7xl">
-            {hero.titleZh.split("与")[0]}
+            {hero.headline}
             <br />
-            <span className="text-primary">与{hero.titleZh.split("与")[1]}</span>
+            <span className="text-primary">{hero.highlight}</span>
           </h1>
 
           <p className="mb-6 text-lg text-gray-600 md:text-xl">
-            {hero.titleEn}
+            {hero.subheadline}
           </p>
 
           <p className="mb-12 text-lg text-gray-700 md:text-xl">
-            <span className="font-semibold">{hero.valueProposition}</span>
+            <span className="font-semibold">{hero.description}</span>
           </p>
 
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
