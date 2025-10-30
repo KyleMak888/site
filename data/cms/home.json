@@ -1,0 +1,101 @@
+{
+  "hero": {
+    "headline": "技术驱动的品牌营销",
+    "highlight": "与数字产品",
+    "subheadline": "Tech-powered brand marketing & product development",
+    "description": "内容 × 技术 × 数据，持续交付可量化增长",
+    "badgeLabel": "内容 × 技术 × 数据",
+    "badgeCaption": "可量化的增长伙伴",
+    "backgroundImage": "/images/home-banner-bg.jpg",
+    "primaryCta": {
+      "label": "获取案例包",
+      "href": "#cases"
+    },
+    "secondaryCta": {
+      "label": "预约 15 分钟咨询",
+      "href": "#contact"
+    }
+  },
+  "stats": [
+    {
+      "id": "conversion",
+      "metric": "+150%",
+      "title": "平均转化率提升",
+      "description": "通过数据驱动的营销策略和技术优化"
+    },
+    {
+      "id": "cpl",
+      "metric": "-40%",
+      "title": "获客成本降低",
+      "description": "精准投放与内容营销的完美结合"
+    },
+    {
+      "id": "cases",
+      "metric": "50+",
+      "title": "成功案例",
+      "description": "服务国内外知名品牌，覆盖多个行业"
+    }
+  ],
+  "clients": [
+    { "id": "nike", "name": "Nike", "logo": "/images/logo/nike.svg" },
+    { "id": "adidas", "name": "Adidas", "logo": "/images/logo/adidas.png" },
+    { "id": "bmw", "name": "BMW", "logo": "/images/logo/bmw.png" },
+    { "id": "lululemon", "name": "Lululemon", "logo": "/images/logo/lululemon.png" },
+    { "id": "converse", "name": "Converse", "logo": "/images/logo/converse.jpg" },
+    { "id": "starbucks", "name": "Starbucks", "logo": "/images/logo/starbucks.svg" },
+    { "id": "goat", "name": "GOAT", "logo": "/images/logo/goat.png" },
+    { "id": "sams", "name": "Sam's Club", "logo": "/images/logo/sams.png" },
+    { "id": "burberry", "name": "Burberry", "logo": "/images/logo/burberry.svg" },
+    { "id": "emaar", "name": "Emaar", "logo": "/images/logo/emaar.svg" },
+    { "id": "wcl", "name": "WCL", "logo": "/images/logo/wcl.svg" },
+    { "id": "xyy", "name": "XYY", "logo": "/images/logo/xyy.png" }
+  ],
+  "featuredCases": "cases.json",
+  "services": [
+    {
+      "id": "brand-marketing",
+      "title": "品牌与活动营销",
+      "titleEn": "Brand & Campaign",
+      "description": "品牌策略、创意内容、活动策划与执行，打造有影响力的品牌体验。",
+      "descriptionEn": "Brand strategy, creative content, campaign planning and execution for impactful brand experiences.",
+      "slug": "brand-marketing",
+      "icon": "/images/marketing-gift-card.png",
+      "features": [
+        "品牌定位与叙事",
+        "整合营销活动",
+        "内容策略与制作",
+        "体验设计与创意资产"
+      ]
+    },
+    {
+      "id": "digital-product",
+      "title": "数字产品研发",
+      "titleEn": "Digital Product",
+      "description": "网站、小程序、App、SaaS 平台等数字产品的设计与开发。",
+      "descriptionEn": "Design and development of websites, mini-programs, mobile apps, and SaaS platforms.",
+      "slug": "digital-product",
+      "icon": "/images/3d-screen.png",
+      "features": [
+        "产品策略与原型设计",
+        "全栈开发",
+        "体验优化与可用性测试",
+        "数据驱动迭代"
+      ]
+    },
+    {
+      "id": "data-martech",
+      "title": "数据与营销技术",
+      "titleEn": "Data & MarTech",
+      "description": "MarTech 咨询、数据分析、增长策略，让每一分投入都可追踪。",
+      "descriptionEn": "MarTech consulting, data analytics, and growth strategy enabling measurable outcomes.",
+      "slug": "data-martech",
+      "icon": "/images/marketing-data-dashboard.png",
+      "features": [
+        "MarTech 体系搭建",
+        "数据仪表盘与分析",
+        "营销自动化",
+        "增长实验与优化"
+      ]
+    }
+  ]
+}

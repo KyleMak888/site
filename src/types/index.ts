@@ -1,3 +1,9 @@
+// CTA
+export interface CTA {
+  label: string;
+  href: string;
+}
+
 // 服务类型
 export interface Service {
   id: string;
@@ -37,6 +43,52 @@ export interface CaseResult {
   metric: string;
   value: string;
   description?: string;
+}
+
+// 首页统计数据
+export interface StatItem {
+  id: string;
+  metric: string;
+  title: string;
+  description?: string;
+}
+
+// 客户Logo信息
+export interface ClientLogo {
+  id: string;
+  name: string;
+  logo: string;
+}
+
+// Hero内容
+export interface HeroContent {
+  headline: string;
+  highlight: string;
+  subheadline: string;
+  description: string;
+  badgeLabel?: string;
+  badgeCaption?: string;
+  backgroundImage: string;
+  primaryCta: CTA;
+  secondaryCta: CTA;
+}
+
+// 首页内容（原始）
+export interface HomeCmsData {
+  hero: HeroContent;
+  stats: StatItem[];
+  clients: ClientLogo[];
+  featuredCases: CaseStudy[] | string;
+  services: Service[];
+}
+
+// 首页内容（解析后）
+export interface HomeContent {
+  hero: HeroContent;
+  stats: StatItem[];
+  clients: ClientLogo[];
+  featuredCases: CaseStudy[];
+  services: Service[];
 }
 
 // 洞察/文章类型
