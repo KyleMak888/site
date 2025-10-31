@@ -52,9 +52,9 @@
 ### ✅ Task 2.3: 数据展示组件
 - [x] Stats/KPI 数字组件（基础版本完成，动画待补充）
 - [x] 客户 Logo 墙组件
-- [ ] Testimonial/Quote 组件
-- [ ] 行业徽章组件
-- [ ] Case Study 卡片组件
+- [x] Testimonial/Quote 组件
+- [x] 行业徽章组件
+- [x] Case Study 卡片组件
 
 ---
 
@@ -94,11 +94,11 @@
 - [x] 客户与合作伙伴
 
 ### ✅ Task 3.5: 洞察/博客页面 (/insights)
-- [ ] 文章列表页（分类、标签筛选）
-- [ ] 文章详情页（/insights/[slug]）
-- [ ] 支持 MDX 或富文本
-- [ ] 相关文章推荐
-- [ ] 作者信息
+- [x] 文章列表页（分类、标签筛选）
+- [x] 文章详情页（/insights/[slug]）
+- [x] 支持 MDX 或富文本 *（使用简单的段落解析，支持 markdown heading）*
+- [x] 相关文章推荐
+- [x] 作者信息
 
 ### ✅ Task 3.6: 联系页面 (/contact)
 - [x] 联系表单（姓名、邮箱、公司、预算档位）
@@ -107,9 +107,9 @@
 - [ ] 成功页/Thank You 页（提供 PDF 案例摘要下载）
 
 ### ✅ Task 3.7: 404 & 其他页面
-- [ ] 自定义 404 页面
-- [ ] Loading 状态
-- [ ] Error 边界
+- [x] 自定义 404 页面
+- [x] Loading 状态
+- [x] Error 边界
 
 ---
 
@@ -146,10 +146,10 @@
 - [ ] Canonical URLs
 
 ### ✅ Task 5.2: 结构化数据 (JSON-LD)
-- [ ] Organization Schema
-- [ ] Breadcrumb Schema
-- [ ] Article Schema（洞察文章）
-- [ ] Project/CreativeWork Schema（案例）
+- [x] Organization Schema
+- [x] Breadcrumb Schema
+- [x] Article Schema（洞察文章）
+- [x] Project/CreativeWork Schema（案例）
 
 ### ✅ Task 5.3: 图片与媒体优化
 - [x] 使用 Next/Image 组件

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import { Container, SectionHeading, Button } from "@/components/ui";
+import { Container, SectionHeading, Button, CaseStudyGrid, Breadcrumb } from "@/components/ui";
 import { getAllCases } from "@/lib/cms/loader";
 import type { CaseStudy } from "@/types";
+import { JsonLd, generateBreadcrumbSchema } from "@/lib/utils/json-ld";
 
 export const metadata: Metadata = {
   title: "案例展示 | 成功案例",
@@ -13,11 +12,45 @@ export const metadata: Metadata = {
 export default function WorkPage() {
   const cases = getAllCases() as CaseStudy[];
 
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://yourdomain.com";
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "首页", href: `${baseUrl}/` },
+    { name: "案例展示", href: `${baseUrl}/work` },
+  ]);
+
+  const caseStudyCards = cases.map((caseStudy) => {
+    const tags =
+      (caseStudy.tags && caseStudy.tags.length > 0
+        ? caseStudy.tags.slice(0, 3)
+        : caseStudy.technologies?.slice(0, 3)) || undefined;
+
+    const metrics = caseStudy.results
+      ? caseStudy.results.slice(0, 3).map((result) => ({
+          label: result.metric,
+          value: result.value,
+        }))
+      : undefined;
+
+    return {
+      slug: caseStudy.slug,
+      title: caseStudy.title,
+      client: caseStudy.client,
+      industry: caseStudy.industry,
+      thumbnail: caseStudy.coverImage ?? "/images/case/app-booking.png",
+      description: caseStudy.summary,
+      tags,
+      metrics,
+    };
+  });
+
   return (
     <main className="min-h-screen">
+      <JsonLd data={breadcrumbSchema} />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-gray-50 to-white py-20">
         <Container>
+          <Breadcrumb items={[{ name: "首页", href: "/" }, { name: "案例展示", href: "/work" }]} className="mb-8" />
           <SectionHeading
             title="成功案例"
             titleEn="Our Work"
@@ -47,74 +80,7 @@ export default function WorkPage() {
           </div>
 
           {/* 案例网格 */}
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {cases.map((caseStudy) => (
-              <Link
-                key={caseStudy.id}
-                href={`/work/${caseStudy.slug}`}
-                className="group overflow-hidden rounded-2xl bg-white shadow-lg transition-all hover:-translate-y-2 hover:shadow-2xl"
-              >
-                {/* 封面图 */}
-                <div className="relative h-64 w-full overflow-hidden bg-gray-100">
-                  <Image
-                    src={caseStudy.coverImage ?? "/images/case/app-booking.png"}
-                    alt={caseStudy.title}
-                    fill
-                    loading="lazy"
-                    quality={85}
-                    sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  {caseStudy.featured && (
-                    <div className="absolute right-4 top-4 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-white">
-                      精选案例
-                    </div>
-                  )}
-                </div>
-
-                {/* 内容 */}
-                <div className="p-6">
-                  <div className="mb-3 flex items-center gap-2">
-                    <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
-                      {caseStudy.industry}
-                    </span>
-                    {caseStudy.technologies && caseStudy.technologies[0] && (
-                      <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600">
-                        {caseStudy.technologies[0]}
-                      </span>
-                    )}
-                  </div>
-
-                  <h3 className="mb-2 text-xl font-bold text-gray-900 transition-colors group-hover:text-primary">
-                    {caseStudy.title}
-                  </h3>
-                  <p className="mb-4 text-sm text-gray-500">{caseStudy.client}</p>
-                  <p className="mb-4 text-gray-600 line-clamp-2">{caseStudy.summary}</p>
-
-                  {/* 成果预览 */}
-                  {caseStudy.results && caseStudy.results.length > 0 && (
-                    <div className="mb-4 flex gap-4">
-                      {caseStudy.results.slice(0, 2).map((result, idx) => (
-                        <div key={idx}>
-                          <div className="text-lg font-bold text-primary">
-                            {result.value}
-                          </div>
-                          <div className="text-xs text-gray-500">{result.metric}</div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-500">{caseStudy.duration}</span>
-                    <span className="font-medium text-primary transition-transform group-hover:translate-x-1">
-                      查看详情 →
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
+          <CaseStudyGrid cases={caseStudyCards} columns={3} />
 
           {/* CTA */}
           <div className="mt-16 rounded-2xl bg-gradient-to-r from-primary/10 to-secondary/10 p-12 text-center">

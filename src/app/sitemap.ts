@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { getAllCases } from "@/lib/cms/loader";
+import { getAllCases, getAllInsights } from "@/lib/cms/loader";
 import type { CaseStudy } from "@/types";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -13,6 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services/digital-product",
     "/services/data-martech",
     "/work",
+    "/about",
+    "/insights",
     "/contact",
     "/admin",
   ].map((route) => ({
@@ -31,5 +33,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: caseStudy.featured ? 0.9 : 0.7,
   }));
 
-  return [...staticPages, ...casePages];
+  // 洞察文章页面
+  const insights = getAllInsights();
+  const insightPages = insights.map((insight) => ({
+    url: `${baseUrl}/insights/${insight.slug}`,
+    lastModified: new Date(insight.updatedAt || insight.publishedAt),
+    changeFrequency: "monthly" as const,
+    priority: insight.featured ? 0.9 : 0.7,
+  }));
+
+  return [...staticPages, ...casePages, ...insightPages];
 }

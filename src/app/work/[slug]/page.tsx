@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Container, SectionHeading, Button } from "@/components/ui";
+import { Container, SectionHeading, Button, Breadcrumb } from "@/components/ui";
 import { getAllCases, getCaseBySlug } from "@/lib/cms/loader";
 import type { CaseStudy } from "@/types";
+import { JsonLd, generateBreadcrumbSchema, generateProjectSchema } from "@/lib/utils/json-ld";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -52,11 +53,39 @@ export default async function CaseDetailPage({ params }: Props) {
     .filter((c) => c.id !== caseStudy.id && c.industry === caseStudy.industry)
     .slice(0, 2);
 
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://yourdomain.com";
+  
+  const breadcrumbItems = [
+    { name: "首页", href: "/" },
+    { name: "案例展示", href: "/work" },
+    { name: caseStudy.title, href: `/work/${caseStudy.slug}` },
+  ];
+
+  const breadcrumbSchema = generateBreadcrumbSchema(
+    breadcrumbItems.map((item) => ({
+      name: item.name,
+      href: `${baseUrl}${item.href}`,
+    })),
+  );
+
+  const projectSchema = generateProjectSchema({
+    name: caseStudy.title,
+    description: caseStudy.summary,
+    url: `${baseUrl}/work/${caseStudy.slug}`,
+    image: caseStudy.coverImage ? [`${baseUrl}${caseStudy.coverImage}`] : undefined,
+    client: caseStudy.client,
+    keywords: [caseStudy.industry, ...(caseStudy.technologies || [])],
+    about: caseStudy.industry,
+  });
+
   return (
     <main className="min-h-screen">
+      <JsonLd data={breadcrumbSchema} />
+      <JsonLd data={projectSchema} />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-b from-gray-900 to-gray-800 py-20 text-white">
         <Container>
+          <Breadcrumb items={breadcrumbItems} className="mb-8 text-white/80" />
           <div className="mx-auto max-w-4xl text-center">
             {/* 标签 */}
             <div className="mb-6 flex items-center justify-center gap-3">

@@ -150,6 +150,8 @@ export function getHomeContent(): HomeContent {
     clients: data.clients,
     services: data.services,
     featuredCases,
+    testimonials: data.testimonials || [],
+    industries: data.industries || [],
   };
 }
 
