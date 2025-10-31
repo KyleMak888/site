@@ -94,11 +94,11 @@
 - [x] 客户与合作伙伴
 
 ### ✅ Task 3.5: 洞察/博客页面 (/insights)
-- [ ] 文章列表页（分类、标签筛选）
-- [ ] 文章详情页（/insights/[slug]）
-- [ ] 支持 MDX 或富文本
-- [ ] 相关文章推荐
-- [ ] 作者信息
+- [x] 文章列表页（分类、标签筛选）
+- [x] 文章详情页（/insights/[slug]）
+- [x] 支持 MDX 或富文本 *（使用简单的段落解析，支持 markdown heading）*
+- [x] 相关文章推荐
+- [x] 作者信息
 
 ### ✅ Task 3.6: 联系页面 (/contact)
 - [x] 联系表单（姓名、邮箱、公司、预算档位）
@@ -148,7 +148,7 @@
 ### ✅ Task 5.2: 结构化数据 (JSON-LD)
 - [x] Organization Schema
 - [x] Breadcrumb Schema
-- [ ] Article Schema（洞察文章）*（工具已创建，待 Insights 页面开发后集成）*
+- [x] Article Schema（洞察文章）
 - [x] Project/CreativeWork Schema（案例）
 
 ### ✅ Task 5.3: 图片与媒体优化

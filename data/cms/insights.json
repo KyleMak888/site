@@ -12,7 +12,7 @@
     "publishedAt": "2024-10-15",
     "updatedAt": "2024-10-20",
     "categoryId": "marketing-strategy",
-    "coverImage": "/images/insights/digital-transformation.jpg",
+    "coverImage": "/images/marketing-data-dashboard.png",
     "readTime": 8,
     "featured": true,
     "tagIds": [
@@ -34,7 +34,7 @@
     "publishedAt": "2024-10-10",
     "updatedAt": "2024-10-18",
     "categoryId": "technical-insights",
-    "coverImage": "/images/insights/mini-program-guide.jpg",
+    "coverImage": "/images/3d-screen.png",
     "readTime": 10,
     "tagIds": [
       "mini-program",
@@ -54,7 +54,7 @@
     "authorId": "3",
     "publishedAt": "2024-10-05",
     "categoryId": "trend-analysis",
-    "coverImage": "/images/insights/ai-marketing.jpg",
+    "coverImage": "/images/marketing-gift-card.png",
     "readTime": 7,
     "tagIds": [
       "ai",

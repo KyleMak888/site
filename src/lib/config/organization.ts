@@ -5,7 +5,7 @@ export const organizationConfig: OrganizationSchema = {
   description:
     "技术驱动的品牌营销与数字产品开发公司。内容×技术×数据，持续交付可量化增长。",
   url: "https://yourdomain.com",
-  logo: "https://yourdomain.com/logo.png",
+  logo: "https://yourdomain.com/images/logo/logo_final.png",
   sameAs: [
     // 添加公司的社交媒体链接
     // "https://www.linkedin.com/company/yourcompany",
