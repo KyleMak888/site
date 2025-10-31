@@ -1,8 +1,12 @@
 export { AnimatedCounter, AnimatedText } from "./animated-counter";
 export { AnimatedSection } from "./animated-section";
 export { Badge } from "./badge";
+export { Breadcrumb } from "./breadcrumb";
 export { Button } from "./button";
 export { Card, CardLink } from "./card";
+export { CaseStudyCard, CaseStudyGrid } from "./case-study-card";
 export { Container } from "./container";
+export { IndustryBadge, IndustryBadgeList } from "./industry-badge";
 export { LoadingDots, LoadingSkeleton, LoadingSpinner } from "./loading";
 export { SectionHeading } from "./section-heading";
+export { Testimonial, TestimonialGrid } from "./testimonial";

@@ -47,6 +47,18 @@ export interface CaseResult {
   description?: string;
 }
 
+export interface TestimonialAuthor {
+  name: string;
+  title: string;
+  company: string;
+  avatar?: string;
+}
+
+export interface Testimonial {
+  quote: string;
+  author: TestimonialAuthor;
+}
+
 // 首页统计数据
 export interface StatItem {
   id: string;
@@ -82,6 +94,8 @@ export interface HomeCmsData {
   clients: ClientLogo[];
   featuredCaseSlugs?: string[];
   services: Service[];
+  testimonials?: Testimonial[];
+  industries?: string[];
 }
 
 // 首页内容（解析后）
@@ -91,6 +105,8 @@ export interface HomeContent {
   clients: ClientLogo[];
   featuredCases: CaseStudy[];
   services: Service[];
+  testimonials: Testimonial[];
+  industries: string[];
 }
 
 export interface Category {

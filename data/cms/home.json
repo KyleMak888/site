@@ -50,6 +50,41 @@
     { "id": "wcl", "name": "WCL", "logo": "/images/logo/wcl.svg" },
     { "id": "xyy", "name": "XYY", "logo": "/images/logo/xyy.png" }
   ],
+  "industries": [
+    "零售与电商",
+    "奢侈品与时尚",
+    "生活方式与健身",
+    "餐饮与消费品",
+    "汽车与出行",
+    "文化与旅游",
+    "金融与科技"
+  ],
+  "testimonials": [
+    {
+      "quote": "联恩科技的团队帮助我们在短时间内完成了会员体系的数字化升级，新增渠道的转化率超出了预期。",
+      "author": {
+        "name": "陈伟",
+        "title": "数字化运营负责人",
+        "company": "国际零售品牌"
+      }
+    },
+    {
+      "quote": "他们将内容创意与数据洞察结合得非常出色，整场 Campaign 的曝光和互动数据都获得了明显提升。",
+      "author": {
+        "name": "刘敏",
+        "title": "品牌市场总监",
+        "company": "奢侈品集团"
+      }
+    },
+    {
+      "quote": "从产品体验到技术实现，联恩团队都表现出了极强的专业度，让我们的小程序上线后的满意度非常高。",
+      "author": {
+        "name": "王涛",
+        "title": "数字产品负责人",
+        "company": "连锁生活方式品牌"
+      }
+    }
+  ],
   "featuredCaseSlugs": [
     "sams-club-mini-program",
     "jewelry-ecommerce-app",

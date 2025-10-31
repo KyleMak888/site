@@ -1,7 +1,15 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { AnimatedSection, Button, Container, SectionHeading } from "@/components/ui";
+import {
+  AnimatedSection,
+  Button,
+  CaseStudyGrid,
+  Container,
+  IndustryBadgeList,
+  SectionHeading,
+  TestimonialGrid,
+} from "@/components/ui";
 import { getHomeContent } from "@/lib/cms/loader";
 import { fadeIn, fadeInUp } from "@/lib/animations";
 import { HeroSection, StatsHighlight } from "@/components/sections";
@@ -13,7 +21,32 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const { hero, stats, clients, featuredCases, services } = getHomeContent();
+  const { hero, stats, clients, featuredCases, services, testimonials, industries } = getHomeContent();
+
+  const caseStudyCards = featuredCases.map((caseStudy) => {
+    const tags =
+      (caseStudy.tags && caseStudy.tags.length > 0
+        ? caseStudy.tags.slice(0, 3)
+        : caseStudy.technologies?.slice(0, 3)) || undefined;
+
+    const metrics = caseStudy.results
+      ? caseStudy.results.slice(0, 3).map((result) => ({
+          label: result.metric,
+          value: result.value,
+        }))
+      : undefined;
+
+    return {
+      slug: caseStudy.slug,
+      title: caseStudy.title,
+      client: caseStudy.client,
+      industry: caseStudy.industry,
+      thumbnail: caseStudy.coverImage ?? "/images/case/app-booking.png",
+      description: caseStudy.summary,
+      tags,
+      metrics,
+    };
+  });
 
   return (
     <main>
@@ -61,6 +94,29 @@ export default function Home() {
         </Container>
       </section>
 
+      {/* Industries Section */}
+      {industries.length > 0 && (
+        <section className="bg-white py-20">
+          <Container>
+            <AnimatedSection>
+              <SectionHeading
+                title="服务行业覆盖"
+                description="多行业经验沉淀，快速复用增长打法"
+                align="center"
+              />
+            </AnimatedSection>
+            <AnimatedSection className="mt-10" variants={fadeIn}>
+              <IndustryBadgeList
+                industries={industries}
+                variant="outline"
+                size="lg"
+                className="justify-center gap-3 sm:gap-4"
+              />
+            </AnimatedSection>
+          </Container>
+        </section>
+      )}
+
       {/* Featured Cases Section */}
       <section id="cases" className="bg-white py-20">
         <Container>
@@ -71,41 +127,8 @@ export default function Home() {
               align="center"
             />
           </AnimatedSection>
-          <AnimatedSection className="grid gap-8 md:grid-cols-2 lg:grid-cols-3" variants={fadeInUp}>
-            {featuredCases.map((caseStudy) => (
-              <Link
-                key={caseStudy.id}
-                href={`/work/${caseStudy.slug}`}
-                className="group overflow-hidden rounded-2xl bg-white shadow-lg transition-all hover:-translate-y-1 hover:shadow-2xl"
-              >
-                <div className="relative h-52 w-full overflow-hidden">
-                  <Image
-                    src={caseStudy.coverImage ?? "/images/case/app-booking.png"}
-                    alt={caseStudy.title}
-                    fill
-                    loading="lazy"
-                    quality={85}
-                    sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="mb-2 inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
-                    {caseStudy.industry}
-                    <span className="h-1 w-1 rounded-full bg-primary"></span>
-                    {caseStudy.technologies?.[0]}
-                  </div>
-                  <h3 className="mb-2 text-xl font-bold text-gray-900 transition-colors group-hover:text-primary">
-                    {caseStudy.title}
-                  </h3>
-                  <p className="mb-4 text-gray-600 line-clamp-3">{caseStudy.summary}</p>
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-500">{caseStudy.duration}</span>
-                    <span className="font-medium text-primary">查看详情 →</span>
-                  </div>
-                </div>
-              </Link>
-            ))}
+          <AnimatedSection className="mt-10" variants={fadeInUp}>
+            <CaseStudyGrid cases={caseStudyCards} columns={3} />
           </AnimatedSection>
 
           <AnimatedSection className="mt-12 text-center">
@@ -161,6 +184,24 @@ export default function Home() {
           </AnimatedSection>
         </Container>
       </section>
+
+      {/* Testimonials Section */}
+      {testimonials.length > 0 && (
+        <section className="bg-gray-50 py-20">
+          <Container>
+            <AnimatedSection>
+              <SectionHeading
+                title="客户评价"
+                description="听听合作伙伴怎么说"
+                align="center"
+              />
+            </AnimatedSection>
+            <AnimatedSection className="mt-10" variants={fadeInUp}>
+              <TestimonialGrid testimonials={testimonials} columns={3} />
+            </AnimatedSection>
+          </Container>
+        </section>
+      )}
 
       {/* CTA Section */}
       <section id="contact" className="bg-primary py-20 text-white">

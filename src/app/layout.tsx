@@ -3,6 +3,8 @@ import { Inter, Noto_Sans_SC } from "next/font/google";
 import "./globals.css";
 import { Header, Footer } from "@/components/layout";
 import { WebVitals } from "@/components/web-vitals";
+import { JsonLd, generateOrganizationSchema } from "@/lib/utils/json-ld";
+import { organizationConfig } from "@/lib/config/organization";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -96,6 +98,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-CN" className={`${inter.variable} ${notoSansSC.variable}`}>
+      <head>
+        <JsonLd data={generateOrganizationSchema(organizationConfig)} />
+      </head>
       <body className="font-sans antialiased">
         <WebVitals />
         <Header />
