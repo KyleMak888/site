@@ -1,0 +1,23 @@
+[
+  {
+    "id": "marketing-strategy",
+    "name": "营销策略",
+    "nameEn": "Marketing Strategy",
+    "slug": "marketing-strategy",
+    "description": "营销与品牌策略相关洞察"
+  },
+  {
+    "id": "technical-insights",
+    "name": "技术分享",
+    "nameEn": "Technical Insights",
+    "slug": "technical-insights",
+    "description": "产品开发与技术实践经验"
+  },
+  {
+    "id": "trend-analysis",
+    "name": "技术趋势",
+    "nameEn": "Trend Analysis",
+    "slug": "trend-analysis",
+    "description": "行业趋势与新兴技术分析"
+  }
+]

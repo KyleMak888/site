@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "name": "张明",
+    "nameEn": "Ming Zhang",
+    "role": "数字营销专家",
+    "avatar": "/images/authors/zhang-ming.jpg",
+    "bio": "10年数字营销经验，帮助消费者品牌构建端到端的数字营销体系。",
+    "bioEn": "10 years of digital marketing experience helping consumer brands build end-to-end digital marketing systems."
+  },
+  {
+    "id": "2",
+    "name": "李华",
+    "nameEn": "Hua Li",
+    "role": "前端技术专家",
+    "avatar": "/images/authors/li-hua.jpg",
+    "bio": "资深前端工程师，小程序与跨平台开发领域讲师。",
+    "bioEn": "Senior front-end engineer and instructor in mini program and cross-platform development."
+  },
+  {
+    "id": "3",
+    "name": "王芳",
+    "nameEn": "Fang Wang",
+    "role": "AI营销顾问",
+    "avatar": "/images/authors/wang-fang.jpg",
+    "bio": "AI技术应用专家，擅长构建数据驱动的营销增长方案。",
+    "bioEn": "AI application specialist focused on building data-driven marketing growth programs."
+  }
+]

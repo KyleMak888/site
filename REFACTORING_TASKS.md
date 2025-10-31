@@ -179,13 +179,13 @@
 ### ✅ Task 6.2: 内容模型设计
 - [x] Service 模型（服务类型、描述、案例引用）
 - [x] Case 模型（客户、行业、目标、方案、成效、技术栈、截图）
-- [ ] Insight/Article 模型（标题、内容、作者、标签、发布日期）
-- [ ] Author 模型
-- [ ] Tag/Category 模型
+- [x] Insight/Article 模型（标题、内容、作者、标签、发布日期）
+- [x] Author 模型
+- [x] Tag/Category 模型
 
 ### ✅ Task 6.3: CMS 集成
 - [x] 创建 CMS 客户端（SDK/API）*（基于 JSON 文件的 loader）*
-- [x] 数据获取函数（getServices, getCases, getInsights）*（已实现 services/cases，Insights 待补充）*
+- [x] 数据获取函数（getServices, getCases, getInsights）*（已全部实现，包含 author/tag/category 关联）*
 - [ ] ISR 配置（Incremental Static Regeneration）
 - [x] 页面与 CMS 数据绑定
 
@@ -199,20 +199,20 @@
 ## 阶段 7: 动效与交互 / Phase 7: Animations & Interactions
 
 ### ✅ Task 7.1: Framer Motion 集成
-- [ ] 安装和配置 Framer Motion
-- [ ] 创建通用动画变体
+- [x] 安装和配置 Framer Motion
+- [x] 创建通用动画变体
 
 ### ✅ Task 7.2: 页面动画
-- [ ] 滚动显现动画（Scroll-triggered）
+- [x] 滚动显现动画（Scroll-triggered）
 - [ ] 页面切换过渡
-- [ ] Hero Section 动画
-- [ ] 数字动画（Stats）
+- [x] Hero Section 动画
+- [x] 数字动画（Stats）
 
 ### ✅ Task 7.3: 微交互
-- [ ] 按钮悬停效果
-- [ ] 卡片悬停效果
-- [ ] 导航栏滚动效果
-- [ ] 加载指示器
+- [x] 按钮悬停效果
+- [x] 卡片悬停效果
+- [x] 导航栏滚动效果
+- [x] 加载指示器
 
 ---
 

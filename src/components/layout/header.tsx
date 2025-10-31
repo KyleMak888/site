@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui";
 
@@ -18,9 +19,45 @@ const navigation = [
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const { scrollY } = useScroll();
+  const lastYRef = useRef(0);
+  const [hidden, setHidden] = useState(false);
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = lastYRef.current;
+    const difference = latest - previous;
+
+    if (latest > 100 && difference > 0) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+
+    if (latest > 20) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+
+    lastYRef.current = latest;
+  });
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-black/5 bg-white/80 backdrop-blur-md">
+    <motion.header
+      variants={{
+        visible: { y: 0 },
+        hidden: { y: "-100%" },
+      }}
+      animate={hidden ? "hidden" : "visible"}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+      className={cn(
+        "sticky top-0 z-50 w-full border-b transition-all duration-300",
+        scrolled
+          ? "border-black/10 bg-white/95 shadow-sm backdrop-blur-md"
+          : "border-transparent bg-white/80 backdrop-blur-md"
+      )}
+    >
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-2 text-lg font-semibold">
           <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-lg font-bold text-white">
@@ -116,6 +153,6 @@ export function Header() {
           </nav>
         </div>
       )}
-    </header>
+    </motion.header>
   );
 }
