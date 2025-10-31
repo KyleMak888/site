@@ -93,6 +93,25 @@ export interface HomeContent {
   services: Service[];
 }
 
+export interface Category {
+  id: string;
+  name: string;
+  nameEn: string;
+  slug: string;
+  description?: string;
+}
+
+export interface Tag {
+  id: string;
+  name: string;
+  nameEn: string;
+  slug: string;
+  description?: string;
+  descriptionEn?: string;
+  categoryId?: string;
+  category?: Category;
+}
+
 // 洞察/文章类型
 export interface Insight {
   id: string;
@@ -103,13 +122,17 @@ export interface Insight {
   summaryEn: string;
   content: string;
   contentEn: string;
+  authorId: string;
   author?: Author;
   publishedAt: string;
   updatedAt?: string;
-  tags?: string[];
-  category?: string;
+  tagIds?: string[];
+  tags?: Tag[];
+  categoryId?: string;
+  category?: Category;
   coverImage?: string;
   readTime?: number;
+  featured?: boolean;
 }
 
 // 作者类型
@@ -120,6 +143,7 @@ export interface Author {
   role?: string;
   avatar?: string;
   bio?: string;
+  bioEn?: string;
 }
 
 // 联系表单类型

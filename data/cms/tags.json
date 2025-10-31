@@ -1,0 +1,58 @@
+[
+  {
+    "id": "digital-marketing",
+    "name": "数字营销",
+    "nameEn": "Digital Marketing",
+    "slug": "digital-marketing",
+    "description": "数字营销策略、技巧与案例",
+    "descriptionEn": "Digital marketing strategies, tips and cases"
+  },
+  {
+    "id": "martech",
+    "name": "MarTech",
+    "nameEn": "MarTech",
+    "slug": "martech",
+    "description": "营销技术与工具",
+    "descriptionEn": "Marketing technology and tools"
+  },
+  {
+    "id": "mini-program",
+    "name": "小程序",
+    "nameEn": "Mini Program",
+    "slug": "mini-program",
+    "description": "小程序开发与运营",
+    "descriptionEn": "Mini program development and operations"
+  },
+  {
+    "id": "ai",
+    "name": "人工智能",
+    "nameEn": "Artificial Intelligence",
+    "slug": "ai",
+    "description": "AI技术在营销与产品中的应用",
+    "descriptionEn": "AI applications in marketing and products"
+  },
+  {
+    "id": "data-driven",
+    "name": "数据驱动",
+    "nameEn": "Data Driven",
+    "slug": "data-driven",
+    "description": "数据分析与数据驱动决策",
+    "descriptionEn": "Data analysis and data-driven decision making"
+  },
+  {
+    "id": "ux",
+    "name": "用户体验",
+    "nameEn": "User Experience",
+    "slug": "ux",
+    "description": "用户体验设计与优化",
+    "descriptionEn": "User experience design and optimization"
+  },
+  {
+    "id": "performance",
+    "name": "性能优化",
+    "nameEn": "Performance Optimization",
+    "slug": "performance",
+    "description": "Web性能与加载优化",
+    "descriptionEn": "Web performance and loading optimization"
+  }
+]

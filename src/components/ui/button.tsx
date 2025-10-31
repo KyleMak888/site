@@ -1,6 +1,10 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import { buttonHover, buttonTap } from "@/lib/animations";
 
 type ButtonVariant = "primary" | "secondary" | "outline" | "ghost";
 type ButtonSize = "sm" | "md" | "lg";
@@ -27,6 +31,8 @@ type ButtonAsLink = BaseProps & {
 };
 
 type ButtonProps = ButtonAsButton | ButtonAsLink;
+
+const MotionWrapper = motion.span;
 
 const baseStyles =
   "inline-flex items-center justify-center rounded-xl font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-70";
@@ -103,18 +109,24 @@ export function Button(props: ButtonProps) {
     </span>
   );
 
+  const wrapperClasses = cn(fullWidth ? "block w-full" : "inline-block");
+
   if ("href" in rest && rest.href) {
     const { href, ...linkProps } = rest;
     return (
-      <Link href={href} {...linkProps} className={classes}>
-        {content}
-      </Link>
+      <MotionWrapper whileHover={buttonHover} whileTap={buttonTap} className={wrapperClasses}>
+        <Link href={href} {...linkProps} className={classes}>
+          {content}
+        </Link>
+      </MotionWrapper>
     );
   }
 
   return (
-    <button {...(rest as ButtonAsButton)} className={classes}>
-      {content}
-    </button>
+    <MotionWrapper whileHover={buttonHover} whileTap={buttonTap} className={wrapperClasses}>
+      <button {...(rest as ButtonAsButton)} className={classes}>
+        {content}
+      </button>
+    </MotionWrapper>
   );
 }
