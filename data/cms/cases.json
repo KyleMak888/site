@@ -1,0 +1,77 @@
+[
+  {
+    "id": "case-sams-club",
+    "title": "山姆会员商店小程序",
+    "titleEn": "Sam's Club Mini Program",
+    "client": "山姆会员商店",
+    "industry": "零售行业",
+    "industryEn": "Retail",
+    "slug": "sams-club-mini-program",
+    "summary": "为山姆会员商店打造高性能小程序，提升会员购物体验",
+    "summaryEn": "Built a high-performance mini-program for Sam's Club to enhance member shopping experience.",
+    "challenge": "大流量高并发场景下的性能优化，会员体系复杂，需要无缝对接线上线下",
+    "solution": "采用微服务架构，优化前端性能，实现智能缓存策略。整合会员系统，打通线上线下数据。",
+    "results": [
+      { "metric": "页面加载速度", "value": "-60%", "description": "首屏加载时间从3s降至1.2s" },
+      { "metric": "会员满意度", "value": "+45%", "description": "用户体验评分大幅提升" },
+      { "metric": "转化率", "value": "+35%", "description": "在线下单转化率提升" }
+    ],
+    "technologies": ["WeChat Mini Program", "React", "Node.js", "Redis", "MongoDB"],
+    "duration": "3 个月",
+    "coverImage": "/images/case/app-sams-club.png",
+    "images": ["/images/case/app-sams-club.png"],
+    "featured": true,
+    "publishedAt": "2023-12-01",
+    "tags": ["小程序", "零售", "高并发", "会员系统"]
+  },
+  {
+    "id": "case-jewelry-ecom",
+    "title": "珠宝电商小程序",
+    "titleEn": "Jewelry E-commerce App",
+    "client": "奢侈品珠宝品牌",
+    "industry": "奢侈品",
+    "industryEn": "Luxury",
+    "slug": "jewelry-ecommerce-app",
+    "summary": "打造高端珠宝线上销售平台，融合3D展示与AR试戴功能",
+    "summaryEn": "Created a luxury jewelry e-commerce platform with 3D visualization and AR try-on features.",
+    "challenge": "如何在线上还原奢侈品的高端体验，让用户感受到珠宝的质感和细节",
+    "solution": "引入3D建模技术，实现360度全景展示。结合AR试戴功能，让用户在线体验。精致的UI设计强化品牌调性。",
+    "results": [
+      { "metric": "线上转化率", "value": "+180%", "description": "AR试戴功能大幅提升转化" },
+      { "metric": "客单价", "value": "+90%", "description": "高端用户占比提升" },
+      { "metric": "退货率", "value": "-40%", "description": "所见即所得减少退货" }
+    ],
+    "technologies": ["WeChat Mini Program", "Three.js", "AR Kit", "WebGL"],
+    "duration": "4 个月",
+    "coverImage": "/images/case/app-jewelry-ecom.png",
+    "images": ["/images/case/app-jewelry-ecom.png"],
+    "featured": true,
+    "publishedAt": "2023-10-15",
+    "tags": ["小程序", "电商", "3D", "AR", "奢侈品"]
+  },
+  {
+    "id": "case-booking-app",
+    "title": "预约服务应用",
+    "titleEn": "Booking Service App",
+    "client": "服务行业连锁品牌",
+    "industry": "服务行业",
+    "industryEn": "Service",
+    "slug": "booking-service-app",
+    "summary": "智能预约系统，优化用户预约流程，提升门店运营效率",
+    "summaryEn": "Intelligent booking system that optimizes appointment process and improves store operations.",
+    "challenge": "多门店预约管理复杂，资源调度效率低，用户预约体验不佳",
+    "solution": "开发智能排班算法，实时库存管理系统。优化预约流程，支持快速改约和取消。",
+    "results": [
+      { "metric": "预约效率", "value": "+200%", "description": "预约时间从5分钟降至1.5分钟" },
+      { "metric": "门店利用率", "value": "+35%", "description": "空档时间大幅减少" },
+      { "metric": "取消率", "value": "-50%", "description": "灵活改约降低取消率" }
+    ],
+    "technologies": ["React Native", "Node.js", "MongoDB", "Socket.io"],
+    "duration": "2 个月",
+    "coverImage": "/images/case/app-booking.png",
+    "images": ["/images/case/app-booking.png"],
+    "featured": true,
+    "publishedAt": "2023-09-20",
+    "tags": ["预约系统", "SaaS", "移动应用", "智能调度"]
+  }
+]
