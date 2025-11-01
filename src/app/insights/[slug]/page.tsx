@@ -70,7 +70,7 @@ export default async function InsightDetailPage({ params }: Props) {
     headline: insight.title,
     description: insight.summary,
     author: {
-      name: insight.author?.name || "联恩科技",
+      name: insight.author?.name || "领燕科技",
       url: insight.author ? `${baseUrl}/about#team` : undefined,
     },
     datePublished: insight.publishedAt,
@@ -78,7 +78,7 @@ export default async function InsightDetailPage({ params }: Props) {
     image: insight.coverImage ? `${baseUrl}${insight.coverImage}` : undefined,
     url: `${baseUrl}/insights/${insight.slug}`,
     publisher: {
-      name: "广州联恩科技",
+      name: "广州领燕科技",
       logo: `${baseUrl}/logo.png`,
     },
   });

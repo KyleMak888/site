@@ -101,7 +101,7 @@ CTA Section（行动号召）
   "url": "文章完整URL",
   "publisher": {
     "@type": "Organization",
-    "name": "广州联恩科技",
+    "name": "广州领燕科技",
     "logo": {
       "@type": "ImageObject",
       "url": "公司Logo URL"

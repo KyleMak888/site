@@ -159,7 +159,7 @@ import { TestimonialGrid } from "@/components/ui";
 
 const testimonials = [
   {
-    quote: "与联恩科技的合作非常愉快，他们的专业团队帮助我们实现了业务目标。",
+    quote: "与领燕科技的合作非常愉快，他们的专业团队帮助我们实现了业务目标。",
     author: {
       name: "张三",
       title: "市场总监",

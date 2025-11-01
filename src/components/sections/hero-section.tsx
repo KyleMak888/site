@@ -16,7 +16,7 @@ export function HeroSection({ hero }: HeroSectionProps) {
       <div className="absolute inset-0 -z-10">
         <Image
           src={hero.backgroundImage}
-          alt="广州联恩科技 - 品牌与数字产品背景"
+          alt="广州领燕科技 - 品牌与数字产品背景"
           fill
           priority
           quality={85}

@@ -25,8 +25,8 @@ const notoSansSC = Noto_Sans_SC({
 
 export const metadata: Metadata = {
   title: {
-    default: "广州联恩科技 | 技术驱动的品牌营销与数字产品",
-    template: "%s | 广州联恩科技",
+    default: "广州领燕科技 | 技术驱动的品牌营销与数字产品",
+    template: "%s | 广州领燕科技",
   },
   description:
     "内容×技术×数据，持续交付可量化增长。专注品牌营销、数字产品研发、营销技术咨询服务。",
@@ -55,8 +55,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "zh_CN",
     url: "https://yourdomain.com",
-    siteName: "广州联恩科技",
-    title: "广州联恩科技 | 技术驱动的品牌营销与数字产品",
+    siteName: "广州领燕科技",
+    title: "广州领燕科技 | 技术驱动的品牌营销与数字产品",
     description:
       "内容×技术×数据，持续交付可量化增长。专注品牌营销、数字产品研发、营销技术咨询服务。",
     images: [
@@ -64,13 +64,13 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "广州联恩科技",
+        alt: "广州领燕科技",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "广州联恩科技 | 技术驱动的品牌营销与数字产品",
+    title: "广州领燕科技 | 技术驱动的品牌营销与数字产品",
     description:
       "内容×技术×数据，持续交付可量化增长。",
     images: ["/twitter-image.jpg"],

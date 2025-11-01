@@ -107,7 +107,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 border-t border-gray-800 pt-8">
           <div className="flex flex-col items-center justify-between gap-4 text-sm text-gray-400 md:flex-row">
-            <p>© 2024 广州联恩科技有限公司 版权所有</p>
+            <p>© 2024 广州领燕科技有限公司 版权所有</p>
             <div className="flex gap-6">
               <Link href="/privacy" className="hover:text-primary">
                 隐私政策

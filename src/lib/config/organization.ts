@@ -1,7 +1,7 @@
 import type { OrganizationSchema } from "@/lib/utils/json-ld";
 
 export const organizationConfig: OrganizationSchema = {
-  name: "广州联恩科技有限公司",
+  name: "广州领燕科技有限公司",
   description:
     "技术驱动的品牌营销与数字产品开发公司。内容×技术×数据，持续交付可量化增长。",
   url: "https://yourdomain.com",

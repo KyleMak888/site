@@ -1,4 +1,4 @@
-# 广州联恩科技官方网站 / Guangzhou Linkend Tech Official Website
+# 广州领燕科技官方网站 / Guangzhou Linkend Tech Official Website
 
 [![Next.js](https://img.shields.io/badge/Next.js-15-black)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)](https://www.typescriptlang.org/)
