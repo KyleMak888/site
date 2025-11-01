@@ -1,0 +1,71 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "work": "Work",
+    "insights": "Insights",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "button": {
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "viewAllCases": "View All Cases",
+    "viewAllInsights": "View All Insights",
+    "getStarted": "Get Started",
+    "bookConsultation": "Book Consultation",
+    "book15minConsultation": "Book 15-min Consultation",
+    "getCaseStudies": "Get Case Studies",
+    "submit": "Submit",
+    "send": "Send",
+    "backToHome": "Back to Home"
+  },
+  "language": {
+    "switchTo": "Switch Language",
+    "current": "Current Language"
+  },
+  "footer": {
+    "company": "Company",
+    "aboutUs": "About Us",
+    "careers": "Careers",
+    "contact": "Contact",
+    "services": "Services",
+    "brandMarketing": "Brand & Campaign",
+    "digitalProduct": "Digital Product",
+    "dataMartech": "Data & MarTech",
+    "resources": "Resources",
+    "insights": "Insights",
+    "caseStudies": "Case Studies",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "© {{year}} Guangzhou Linkend Technology Co., Ltd. All rights reserved.",
+    "tagline": "Content × Tech × Data",
+    "socialLinks": "Social links"
+  },
+  "meta": {
+    "defaultTitle": "Linkend Tech | Tech-Powered Brand Marketing & Digital Products",
+    "titleTemplate": "%s | Linkend Tech",
+    "description": "Content × Tech × Data, delivering measurable growth. Specialized in brand marketing, digital product development, and MarTech consulting services.",
+    "keywords": "brand marketing, digital products, marketing technology, mini-program development, website development, data-driven growth, MarTech, Guangzhou"
+  },
+  "aria": {
+    "mainNavigation": "Main navigation",
+    "mobileNavigation": "Mobile navigation",
+    "skipToContent": "Skip to main content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "loading": "Loading...",
+  "error": {
+    "title": "Something Went Wrong",
+    "description": "Sorry, there was an error loading this page.",
+    "reload": "Reload",
+    "backHome": "Back to Home"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "Sorry, the page you are looking for doesn't exist.",
+    "backHome": "Back to Home"
+  }
+}

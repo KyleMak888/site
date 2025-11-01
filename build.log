@@ -1,0 +1,31 @@
+
+> linkend-website@2.0.0 build
+> next build
+
+   ▲ Next.js 16.0.1 (Turbopack)
+   - Experiments (use with caution):
+     · optimizePackageImports
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 7.7s
+   Running TypeScript ...
+Failed to compile.
+
+./src/i18n/request.ts:6:33
+Type error: Argument of type '({ locale }: GetRequestConfigParams) => Promise<{ locale: string | undefined; messages: { common: any; home: any; }; timeZone: "Asia/Shanghai"; now: Date; }>' is not assignable to parameter of type '(params: GetRequestConfigParams) => RequestConfig | Promise<RequestConfig>'.
+  Type 'Promise<{ locale: string | undefined; messages: { common: any; home: any; }; timeZone: "Asia/Shanghai"; now: Date; }>' is not assignable to type 'RequestConfig | Promise<RequestConfig>'.
+    Type 'Promise<{ locale: string | undefined; messages: { common: any; home: any; }; timeZone: "Asia/Shanghai"; now: Date; }>' is not assignable to type 'Promise<RequestConfig>'.
+      Type '{ locale: string | undefined; messages: { common: any; home: any; }; timeZone: "Asia/Shanghai"; now: Date; }' is not assignable to type 'RequestConfig'.
+        Type '{ locale: string | undefined; messages: { common: any; home: any; }; timeZone: "Asia/Shanghai"; now: Date; }' is not assignable to type '{ locale: string; }'.
+          Types of property 'locale' are incompatible.
+            Type 'string | undefined' is not assignable to type 'string'.
+              Type 'undefined' is not assignable to type 'string'.
+
+[0m [90m 4 |[39m [36mimport[39m type { [33mLocale[39m } [36mfrom[39m [32m"./config"[39m[33m;[39m
+ [90m 5 |[39m
+[31m[1m>[22m[39m[90m 6 |[39m [36mexport[39m [36mdefault[39m getRequestConfig([36masync[39m ({ locale }) [33m=>[39m {
+ [90m   |[39m                                 [31m[1m^[22m[39m
+ [90m 7 |[39m   [90m// Validate that the incoming `locale` parameter is valid[39m
+ [90m 8 |[39m   [36mif[39m ([33m![39mlocales[33m.[39mincludes(locale [36mas[39m [33mLocale[39m)) {
+ [90m 9 |[39m     notFound()[33m;[39m[0m
+Next.js build worker exited with code: 1 and signal: null

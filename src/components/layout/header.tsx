@@ -1,22 +1,24 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useEffect, useId, useRef, useState } from "react";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui";
+import { Link, usePathname } from "@/i18n/navigation";
+import { LanguageSwitcher } from "./language-switcher";
 
 const navigation = [
-  { href: "/", label: "首页", labelEn: "Home" },
-  { href: "/services", label: "服务", labelEn: "Services" },
-  { href: "/work", label: "案例", labelEn: "Work" },
-  { href: "/insights", label: "洞察", labelEn: "Insights" },
-  { href: "/about", label: "关于我们", labelEn: "About" },
-  { href: "/contact", label: "联系", labelEn: "Contact" },
+  { href: "/", key: "home" },
+  { href: "/services", key: "services" },
+  { href: "/work", key: "work" },
+  { href: "/insights", key: "insights" },
+  { href: "/about", key: "about" },
+  { href: "/contact", key: "contact" },
 ];
 
 export function Header() {
+  const t = useTranslations("common");
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -95,33 +97,31 @@ export function Header() {
           </span>
           <div className="flex flex-col leading-tight">
             <span>Linkend Tech</span>
-            <span className="text-xs text-gray-500">内容 × 技术 × 数据</span>
+            <span className="text-xs text-gray-500">{t("footer.tagline")}</span>
           </div>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav aria-label="主导航" className="hidden items-center gap-6 lg:flex">
+        <nav aria-label={t("aria.mainNavigation")} className="hidden items-center gap-6 lg:flex">
           {navigation.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded",
+                "rounded text-sm font-medium transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
                 pathname === item.href ? "text-primary" : "text-gray-600",
               )}
               aria-current={pathname === item.href ? "page" : undefined}
             >
-              {item.label}
+              {t(`nav.${item.key}`)}
             </Link>
           ))}
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <Button variant="ghost" size="sm" href="/en">
-            EN
-          </Button>
+          <LanguageSwitcher />
           <Button size="sm" href="/contact">
-            预约咨询
+            {t("button.bookConsultation")}
           </Button>
         </div>
 
@@ -129,7 +129,7 @@ export function Header() {
         <button
           className="inline-flex items-center justify-center rounded-lg border border-gray-200 p-2 lg:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
           onClick={() => setOpen((prev) => !prev)}
-          aria-label="打开或关闭导航菜单"
+          aria-label={open ? t("aria.closeMenu") : t("aria.openMenu")}
           aria-expanded={open}
           aria-controls={menuId}
           aria-haspopup="true"
@@ -163,7 +163,7 @@ export function Header() {
       {/* Mobile Navigation */}
       {open && (
         <div id={menuId} className="border-t border-gray-100 bg-white lg:hidden">
-          <nav aria-label="移动端导航" className="flex flex-col px-6 py-4">
+          <nav aria-label={t("aria.mobileNavigation")} className="flex flex-col px-6 py-4">
             {navigation.map((item, index) => (
               <Link
                 key={item.href}
@@ -176,16 +176,13 @@ export function Header() {
                 onClick={() => setOpen(false)}
                 aria-current={pathname === item.href ? "page" : undefined}
               >
-                {item.label}
-                <span className="ml-2 text-xs text-gray-400">{item.labelEn}</span>
+                {t(`nav.${item.key}`)}
               </Link>
             ))}
             <div className="mt-4 flex flex-col gap-3">
-              <Button variant="ghost" href="/en" aria-label="切换到英语版本">
-                English Version
-              </Button>
-              <Button href="/contact" aria-label="预约十五分钟咨询">
-                预约 15 分钟咨询
+              <LanguageSwitcher />
+              <Button href="/contact" aria-label={t("button.book15minConsultation")}>
+                {t("button.book15minConsultation")}
               </Button>
             </div>
           </nav>

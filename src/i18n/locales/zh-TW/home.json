@@ -1,0 +1,57 @@
+{
+  "hero": {
+    "badge": {
+      "label": "內容 × 技術 × 數據",
+      "caption": "可量化的成長夥伴"
+    },
+    "headline": "技術驅動的品牌行銷",
+    "highlight": "與數位產品",
+    "subheadline": "Tech-powered brand marketing & product development",
+    "description": "內容 × 技術 × 數據，持續交付可量化成長",
+    "primaryCta": "獲取案例包",
+    "secondaryCta": "預約 15 分鐘諮詢"
+  },
+  "stats": {
+    "title": "我們的成果",
+    "description": "",
+    "items": {
+      "conversion": {
+        "title": "平均轉化率提升",
+        "description": "透過數據驅動的行銷策略和技術優化"
+      },
+      "cpl": {
+        "title": "獲客成本降低",
+        "description": "精準投放與內容行銷的完美結合"
+      },
+      "cases": {
+        "title": "成功案例",
+        "description": "服務國內外知名品牌，覆蓋多個行業"
+      }
+    }
+  },
+  "clients": {
+    "title": "合作客戶",
+    "description": "我們與多家國際品牌和行業領軍企業保持長期合作"
+  },
+  "industries": {
+    "title": "服務行業覆蓋",
+    "description": "多行業經驗沉澱，快速複用成長打法"
+  },
+  "cases": {
+    "title": "代表案例",
+    "description": "深度整合內容、技術與數據，為客戶創造可量化的業務成長"
+  },
+  "services": {
+    "title": "我們的服務",
+    "description": "內容 × 技術 × 數據，三位一體的綜合解決方案",
+    "learnMore": "了解更多 →"
+  },
+  "testimonials": {
+    "title": "客戶評價",
+    "description": "聽聽合作夥伴怎麼說"
+  },
+  "cta": {
+    "title": "準備好開始了嗎？",
+    "description": "讓我們一起打造技術驅動的行銷與產品解決方案"
+  }
+}

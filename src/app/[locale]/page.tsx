@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
+import type { Locale } from "@/i18n/config";
 import {
   AnimatedSection,
   Button,
@@ -10,18 +12,25 @@ import {
   SectionHeading,
   TestimonialGrid,
 } from "@/components/ui";
-import { getHomeContent } from "@/lib/cms/loader";
+import { getLocalizedHomeContent } from "@/lib/cms/i18n-loader";
 import { fadeIn, fadeInUp } from "@/lib/animations";
 import { HeroSection, StatsHighlight } from "@/components/sections";
 
-export const metadata: Metadata = {
-  title: "首页",
-  description:
-    "技术驱动的品牌营销与数字产品。内容×技术×数据，持续交付可量化增长。",
-};
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const t = await getTranslations({ locale: params.locale, namespace: "home" });
+  
+  return {
+    title: t("hero.headline"),
+    description: t("hero.description"),
+  };
+}
 
-export default function Home() {
-  const { hero, stats, clients, featuredCases, services, testimonials, industries } = getHomeContent();
+export default async function Home({ params }: { params: { locale: string } }) {
+  const t = await getTranslations({ locale: params.locale, namespace: "home" });
+  const tCommon = await getTranslations({ locale: params.locale, namespace: "common" });
+  const locale = params.locale as Locale;
+  
+  const { hero, stats, clients, featuredCases, services, testimonials, industries } = getLocalizedHomeContent(locale, t);
 
   const caseStudyCards = featuredCases.map((caseStudy) => {
     const tags =
@@ -57,7 +66,7 @@ export default function Home() {
       <section aria-labelledby="stats-heading" className="bg-white py-20">
         <Container>
           <AnimatedSection>
-            <SectionHeading title="我们的成果" align="center" headingId="stats-heading" />
+            <SectionHeading title={t("stats.title")} align="center" headingId="stats-heading" />
           </AnimatedSection>
           <StatsHighlight stats={stats} />
         </Container>
@@ -68,8 +77,8 @@ export default function Home() {
         <Container>
           <AnimatedSection>
             <SectionHeading
-              title="合作客户"
-              description="我们与多家国际品牌和行业领军企业保持长期合作"
+              title={t("clients.title")}
+              description={t("clients.description")}
               align="center"
               headingId="clients-heading"
             />
@@ -101,8 +110,8 @@ export default function Home() {
           <Container>
             <AnimatedSection>
               <SectionHeading
-                title="服务行业覆盖"
-                description="多行业经验沉淀，快速复用增长打法"
+                title={t("industries.title")}
+                description={t("industries.description")}
                 align="center"
                 headingId="industries-heading"
               />
@@ -124,8 +133,8 @@ export default function Home() {
         <Container>
           <AnimatedSection>
             <SectionHeading
-              title="代表案例"
-              description="深度整合内容、技术与数据，为客户创造可量化的业务增长"
+              title={t("cases.title")}
+              description={t("cases.description")}
               align="center"
               headingId="cases-heading"
             />
@@ -136,7 +145,7 @@ export default function Home() {
 
           <AnimatedSection className="mt-12 text-center">
             <Button variant="outline" href="/work">
-              查看全部案例
+              {tCommon("button.viewAllCases")}
             </Button>
           </AnimatedSection>
         </Container>
@@ -147,8 +156,8 @@ export default function Home() {
         <Container>
           <AnimatedSection>
             <SectionHeading
-              title="我们的服务"
-              description="内容 × 技术 × 数据，三位一体的综合解决方案"
+              title={t("services.title")}
+              description={t("services.description")}
               align="center"
               headingId="services-heading"
             />
@@ -181,7 +190,7 @@ export default function Home() {
                   </ul>
                 )}
                 <span className="text-sm font-medium text-primary">
-                  了解更多 →
+                  {t("services.learnMore")}
                 </span>
               </Link>
             ))}
@@ -195,8 +204,8 @@ export default function Home() {
           <Container>
             <AnimatedSection>
               <SectionHeading
-                title="客户评价"
-                description="听听合作伙伴怎么说"
+                title={t("testimonials.title")}
+                description={t("testimonials.description")}
                 align="center"
                 headingId="testimonials-heading"
               />
@@ -212,11 +221,11 @@ export default function Home() {
       <section id="contact" aria-labelledby="cta-heading" className="bg-primary py-20 text-white">
         <Container className="text-center">
           <AnimatedSection>
-            <h2 id="cta-heading" className="mb-4 text-4xl font-bold">准备好开始了吗？</h2>
+            <h2 id="cta-heading" className="mb-4 text-4xl font-bold">{t("cta.title")}</h2>
           </AnimatedSection>
           <AnimatedSection>
             <p className="mb-8 text-xl opacity-90">
-              让我们一起打造技术驱动的营销与产品解决方案
+              {t("cta.description")}
             </p>
           </AnimatedSection>
           <AnimatedSection className="flex flex-col items-center justify-center gap-4 sm:flex-row" variants={fadeIn}>
@@ -226,7 +235,7 @@ export default function Home() {
               href="/contact"
               className="border-white bg-white text-primary hover:bg-gray-100"
             >
-              获取案例包
+              {tCommon("button.getCaseStudies")}
             </Button>
             <Button
               size="lg"
@@ -234,7 +243,7 @@ export default function Home() {
               href="/contact"
               className="border-white text-white hover:bg-white hover:text-primary"
             >
-              预约 15 分钟咨询
+              {tCommon("button.book15minConsultation")}
             </Button>
           </AnimatedSection>
         </Container>
