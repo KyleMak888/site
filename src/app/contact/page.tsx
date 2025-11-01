@@ -14,15 +14,16 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen">
+    <main id="main-content" tabIndex={-1} className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-gray-50 to-white py-20">
+      <section aria-labelledby="contact-hero-heading" className="bg-gradient-to-b from-gray-50 to-white py-20">
         <Container>
           <SectionHeading
             title="联系我们"
             titleEn="Get in Touch"
             description="让我们一起探讨您的项目需求，为您提供专业的解决方案"
             align="center"
+            headingId="contact-hero-heading"
           />
         </Container>
       </section>

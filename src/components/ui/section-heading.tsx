@@ -8,6 +8,7 @@ interface SectionHeadingProps extends HTMLAttributes<HTMLDivElement> {
   titleEn?: string;
   description?: ReactNode;
   align?: "left" | "center";
+  headingId?: string;
 }
 
 export function SectionHeading({
@@ -18,6 +19,7 @@ export function SectionHeading({
   description,
   align = "center",
   className,
+  headingId,
   ...props
 }: SectionHeadingProps) {
   return (
@@ -37,14 +39,14 @@ export function SectionHeading({
           )}
         </p>
       )}
-      <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">
+      <h2 id={headingId} className="text-3xl font-bold text-gray-900 md:text-4xl">
         {title}
         {titleEn && (
           <span className="ml-2 text-primary">{titleEn}</span>
         )}
       </h2>
       {description && (
-        <div className="text-lg text-gray-600">{description}</div>
+        <p className="text-lg text-gray-600">{description}</p>
       )}
     </div>
   );

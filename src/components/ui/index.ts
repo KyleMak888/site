@@ -6,6 +6,7 @@ export { Button } from "./button";
 export { Card, CardLink } from "./card";
 export { CaseStudyCard, CaseStudyGrid } from "./case-study-card";
 export { Container } from "./container";
+export { CookieConsent } from "./cookie-consent";
 export { IndustryBadge, IndustryBadgeList } from "./industry-badge";
 export { LoadingDots, LoadingSkeleton, LoadingSpinner } from "./loading";
 export { SectionHeading } from "./section-heading";
