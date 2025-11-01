@@ -49,28 +49,29 @@ export default function Home() {
   });
 
   return (
-    <main>
+    <main id="main-content" tabIndex={-1}>
       {/* Hero Section */}
       <HeroSection hero={hero} />
 
       {/* Stats Section */}
-      <section className="bg-white py-20">
+      <section aria-labelledby="stats-heading" className="bg-white py-20">
         <Container>
           <AnimatedSection>
-            <SectionHeading title="我们的成果" align="center" />
+            <SectionHeading title="我们的成果" align="center" headingId="stats-heading" />
           </AnimatedSection>
           <StatsHighlight stats={stats} />
         </Container>
       </section>
 
       {/* Clients Section */}
-      <section className="bg-gray-50 py-20">
+      <section aria-labelledby="clients-heading" className="bg-gray-50 py-20">
         <Container>
           <AnimatedSection>
             <SectionHeading
               title="合作客户"
               description="我们与多家国际品牌和行业领军企业保持长期合作"
               align="center"
+              headingId="clients-heading"
             />
           </AnimatedSection>
           <AnimatedSection className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6" variants={fadeIn}>
@@ -96,13 +97,14 @@ export default function Home() {
 
       {/* Industries Section */}
       {industries.length > 0 && (
-        <section className="bg-white py-20">
+        <section aria-labelledby="industries-heading" className="bg-white py-20">
           <Container>
             <AnimatedSection>
               <SectionHeading
                 title="服务行业覆盖"
                 description="多行业经验沉淀，快速复用增长打法"
                 align="center"
+                headingId="industries-heading"
               />
             </AnimatedSection>
             <AnimatedSection className="mt-10" variants={fadeIn}>
@@ -118,13 +120,14 @@ export default function Home() {
       )}
 
       {/* Featured Cases Section */}
-      <section id="cases" className="bg-white py-20">
+      <section id="cases" aria-labelledby="cases-heading" className="bg-white py-20">
         <Container>
           <AnimatedSection>
             <SectionHeading
               title="代表案例"
               description="深度整合内容、技术与数据，为客户创造可量化的业务增长"
               align="center"
+              headingId="cases-heading"
             />
           </AnimatedSection>
           <AnimatedSection className="mt-10" variants={fadeInUp}>
@@ -140,13 +143,14 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="bg-gray-50 py-20">
+      <section aria-labelledby="services-heading" className="bg-gray-50 py-20">
         <Container>
           <AnimatedSection>
             <SectionHeading
               title="我们的服务"
               description="内容 × 技术 × 数据，三位一体的综合解决方案"
               align="center"
+              headingId="services-heading"
             />
           </AnimatedSection>
           <AnimatedSection className="grid gap-8 md:grid-cols-3" variants={fadeInUp}>
@@ -187,13 +191,14 @@ export default function Home() {
 
       {/* Testimonials Section */}
       {testimonials.length > 0 && (
-        <section className="bg-gray-50 py-20">
+        <section aria-labelledby="testimonials-heading" className="bg-gray-50 py-20">
           <Container>
             <AnimatedSection>
               <SectionHeading
                 title="客户评价"
                 description="听听合作伙伴怎么说"
                 align="center"
+                headingId="testimonials-heading"
               />
             </AnimatedSection>
             <AnimatedSection className="mt-10" variants={fadeInUp}>
@@ -204,10 +209,10 @@ export default function Home() {
       )}
 
       {/* CTA Section */}
-      <section id="contact" className="bg-primary py-20 text-white">
+      <section id="contact" aria-labelledby="cta-heading" className="bg-primary py-20 text-white">
         <Container className="text-center">
           <AnimatedSection>
-            <h2 className="mb-4 text-4xl font-bold">准备好开始了吗？</h2>
+            <h2 id="cta-heading" className="mb-4 text-4xl font-bold">准备好开始了吗？</h2>
           </AnimatedSection>
           <AnimatedSection>
             <p className="mb-8 text-xl opacity-90">

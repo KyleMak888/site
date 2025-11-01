@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
-import { useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui";
 
@@ -23,6 +23,35 @@ export function Header() {
   const { scrollY } = useScroll();
   const lastYRef = useRef(0);
   const [hidden, setHidden] = useState(false);
+  const menuId = useId();
+  const firstMobileLinkRef = useRef<HTMLAnchorElement | null>(null);
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+      setTimeout(() => {
+        firstMobileLinkRef.current?.focus();
+      }, 100);
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && open) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [open]);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = lastYRef.current;
@@ -45,6 +74,7 @@ export function Header() {
 
   return (
     <motion.header
+      role="banner"
       variants={{
         visible: { y: 0 },
         hidden: { y: "-100%" },
@@ -70,15 +100,16 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-6 lg:flex">
+        <nav aria-label="主导航" className="hidden items-center gap-6 lg:flex">
           {navigation.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
+                "text-sm font-medium transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded",
                 pathname === item.href ? "text-primary" : "text-gray-600",
               )}
+              aria-current={pathname === item.href ? "page" : undefined}
             >
               {item.label}
             </Link>
@@ -96,9 +127,12 @@ export function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="inline-flex items-center justify-center rounded-lg border border-gray-200 p-2 lg:hidden"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
+          className="inline-flex items-center justify-center rounded-lg border border-gray-200 p-2 lg:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+          onClick={() => setOpen((prev) => !prev)}
+          aria-label="打开或关闭导航菜单"
+          aria-expanded={open}
+          aria-controls={menuId}
+          aria-haspopup="true"
         >
           <svg
             className="h-6 w-6 text-gray-900"
@@ -128,27 +162,31 @@ export function Header() {
 
       {/* Mobile Navigation */}
       {open && (
-        <div className="border-t border-gray-100 bg-white lg:hidden">
-          <nav className="flex flex-col px-6 py-4">
-            {navigation.map((item) => (
+        <div id={menuId} className="border-t border-gray-100 bg-white lg:hidden">
+          <nav aria-label="移动端导航" className="flex flex-col px-6 py-4">
+            {navigation.map((item, index) => (
               <Link
                 key={item.href}
+                ref={index === 0 ? firstMobileLinkRef : null}
                 href={item.href}
                 className={cn(
-                  "rounded-lg px-4 py-3 text-base font-medium transition-colors hover:bg-primary/10",
+                  "rounded-lg px-4 py-3 text-base font-medium transition-colors hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
                   pathname === item.href ? "text-primary" : "text-gray-700",
                 )}
                 onClick={() => setOpen(false)}
+                aria-current={pathname === item.href ? "page" : undefined}
               >
                 {item.label}
                 <span className="ml-2 text-xs text-gray-400">{item.labelEn}</span>
               </Link>
             ))}
             <div className="mt-4 flex flex-col gap-3">
-              <Button variant="ghost" href="/en">
+              <Button variant="ghost" href="/en" aria-label="切换到英语版本">
                 English Version
               </Button>
-              <Button href="/contact">预约 15 分钟咨询</Button>
+              <Button href="/contact" aria-label="预约十五分钟咨询">
+                预约 15 分钟咨询
+              </Button>
             </div>
           </nav>
         </div>

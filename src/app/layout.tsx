@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import { Inter, Noto_Sans_SC } from "next/font/google";
 import "./globals.css";
 import { Header, Footer } from "@/components/layout";
+import { SkipToContent } from "@/components/layout/skip-to-content";
+import { FocusManager } from "@/components/layout/focus-manager";
 import { WebVitals } from "@/components/web-vitals";
+import { CookieConsent } from "@/components/ui";
 import { JsonLd, generateOrganizationSchema } from "@/lib/utils/json-ld";
 import { organizationConfig } from "@/lib/config/organization";
 
@@ -102,10 +105,13 @@ export default function RootLayout({
         <JsonLd data={generateOrganizationSchema(organizationConfig)} />
       </head>
       <body className="font-sans antialiased">
+        <SkipToContent />
         <WebVitals />
+        <FocusManager />
         <Header />
         {children}
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   );

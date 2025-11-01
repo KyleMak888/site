@@ -12,12 +12,15 @@ export default function AboutPage() {
   const { clients } = getHomeContent();
 
   return (
-    <main className="min-h-screen">
+    <main id="main-content" tabIndex={-1} className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-gray-900 to-gray-800 py-20 text-white">
+      <section aria-labelledby="about-hero-heading" className="relative bg-gradient-to-b from-gray-900 to-gray-800 py-20 text-white">
         <Container>
           <div className="mx-auto max-w-4xl text-center">
-            <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+            <h1
+              id="about-hero-heading"
+              className="mb-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl"
+            >
               关于我们
             </h1>
             <p className="mb-4 text-xl text-gray-300">About Us</p>
