@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 
 const footerSections = [
   {
@@ -90,7 +91,10 @@ function FooterLink({ href, label }: { href: string; label: string }) {
   );
 }
 
-export function Footer() {
+export async function Footer() {
+  const t = await getTranslations("common");
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer role="contentinfo" className="bg-gray-900 text-white">
       <div className="container mx-auto px-6 py-12">
@@ -106,13 +110,13 @@ export function Footer() {
               </span>
               <div className="flex flex-col leading-tight">
                 <span>Linkend Tech</span>
-                <span className="text-xs text-gray-300">内容 × 技术 × 数据</span>
+                <span className="text-xs text-gray-300">{t("footer.tagline")}</span>
               </div>
             </Link>
             <p className="mt-4 max-w-md text-sm text-gray-300">
-              技术驱动的品牌营销与数字产品。我们通过内容、技术与数据的深度整合，为客户创造可量化的业务增长。
+              {t("meta.description")}
             </p>
-            <div className="mt-6 flex gap-4" aria-label="社交媒体链接">
+            <div className="mt-6 flex gap-4" aria-label={t("footer.socialLinks")}>
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
@@ -128,33 +132,59 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Footer Links */}
-          {footerSections.map((section) => (
-            <div key={section.title} aria-labelledby={`${section.title}-heading`}>
-              <h3
-                id={`${section.title}-heading`}
-                className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-200"
-              >
-                {section.title}
-              </h3>
-              <ul className="space-y-3">
-                {section.links.map((link) => (
-                  <li key={link.href}>
-                    <FooterLink href={link.href} label={link.label} />
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {/* Services Section */}
+          <div aria-labelledby="footer-services-heading">
+            <h3
+              id="footer-services-heading"
+              className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-200"
+            >
+              {t("footer.services")}
+            </h3>
+            <ul className="space-y-3">
+              <li><FooterLink href="/services/brand-marketing" label={t("footer.brandMarketing")} /></li>
+              <li><FooterLink href="/services/digital-product" label={t("footer.digitalProduct")} /></li>
+              <li><FooterLink href="/services/data-martech" label={t("footer.dataMartech")} /></li>
+            </ul>
+          </div>
+
+          {/* Resources Section */}
+          <div aria-labelledby="footer-resources-heading">
+            <h3
+              id="footer-resources-heading"
+              className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-200"
+            >
+              {t("footer.resources")}
+            </h3>
+            <ul className="space-y-3">
+              <li><FooterLink href="/work" label={t("footer.caseStudies")} /></li>
+              <li><FooterLink href="/insights" label={t("footer.insights")} /></li>
+              <li><FooterLink href="/about" label={t("footer.aboutUs")} /></li>
+            </ul>
+          </div>
+
+          {/* Company Section */}
+          <div aria-labelledby="footer-company-heading">
+            <h3
+              id="footer-company-heading"
+              className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-200"
+            >
+              {t("footer.company")}
+            </h3>
+            <ul className="space-y-3">
+              <li><FooterLink href="/contact" label={t("footer.contact")} /></li>
+              <li><FooterLink href="mailto:contact@linkend.cn" label="contact@linkend.cn" /></li>
+              <li><FooterLink href="tel:+8602012345678" label="+86 020 1234 5678" /></li>
+            </ul>
+          </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="mt-12 border-t border-gray-800 pt-8">
           <div className="flex flex-col items-center justify-between gap-4 text-sm text-gray-300 md:flex-row">
-            <p>© 2024 广州领燕科技有限公司 版权所有</p>
+            <p>{t("footer.copyright", { year: currentYear })}</p>
             <div className="flex flex-wrap items-center gap-6 text-center md:text-left">
-              <FooterLink href="/privacy" label="隐私政策" />
-              <FooterLink href="/terms" label="服务条款" />
+              <FooterLink href="/privacy" label={t("footer.privacy")} />
+              <FooterLink href="/terms" label={t("footer.terms")} />
               <a
                 href="https://beian.miit.gov.cn/"
                 target="_blank"

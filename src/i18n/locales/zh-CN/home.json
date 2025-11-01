@@ -1,0 +1,57 @@
+{
+  "hero": {
+    "badge": {
+      "label": "内容 × 技术 × 数据",
+      "caption": "可量化的增长伙伴"
+    },
+    "headline": "技术驱动的品牌营销",
+    "highlight": "与数字产品",
+    "subheadline": "Tech-powered brand marketing & product development",
+    "description": "内容 × 技术 × 数据，持续交付可量化增长",
+    "primaryCta": "获取案例包",
+    "secondaryCta": "预约 15 分钟咨询"
+  },
+  "stats": {
+    "title": "我们的成果",
+    "description": "",
+    "items": {
+      "conversion": {
+        "title": "平均转化率提升",
+        "description": "通过数据驱动的营销策略和技术优化"
+      },
+      "cpl": {
+        "title": "获客成本降低",
+        "description": "精准投放与内容营销的完美结合"
+      },
+      "cases": {
+        "title": "成功案例",
+        "description": "服务国内外知名品牌，覆盖多个行业"
+      }
+    }
+  },
+  "clients": {
+    "title": "合作客户",
+    "description": "我们与多家国际品牌和行业领军企业保持长期合作"
+  },
+  "industries": {
+    "title": "服务行业覆盖",
+    "description": "多行业经验沉淀，快速复用增长打法"
+  },
+  "cases": {
+    "title": "代表案例",
+    "description": "深度整合内容、技术与数据，为客户创造可量化的业务增长"
+  },
+  "services": {
+    "title": "我们的服务",
+    "description": "内容 × 技术 × 数据，三位一体的综合解决方案",
+    "learnMore": "了解更多 →"
+  },
+  "testimonials": {
+    "title": "客户评价",
+    "description": "听听合作伙伴怎么说"
+  },
+  "cta": {
+    "title": "准备好开始了吗？",
+    "description": "让我们一起打造技术驱动的营销与产品解决方案"
+  }
+}

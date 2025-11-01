@@ -1,0 +1,57 @@
+{
+  "hero": {
+    "badge": {
+      "label": "Content × Tech × Data",
+      "caption": "Your measurable growth partner"
+    },
+    "headline": "Tech-powered brand marketing",
+    "highlight": "& digital products",
+    "subheadline": "Tech-powered brand marketing & product development",
+    "description": "Content × Tech × Data, delivering measurable growth",
+    "primaryCta": "Get case studies",
+    "secondaryCta": "Book a 15-min consultation"
+  },
+  "stats": {
+    "title": "Our impact",
+    "description": "",
+    "items": {
+      "conversion": {
+        "title": "Average conversion lift",
+        "description": "Driven by data-led marketing strategy and technical optimization"
+      },
+      "cpl": {
+        "title": "Lower acquisition cost",
+        "description": "A powerful combination of precise targeting and content marketing"
+      },
+      "cases": {
+        "title": "Successful projects",
+        "description": "Supporting leading brands across industries, online and offline"
+      }
+    }
+  },
+  "clients": {
+    "title": "Selected clients",
+    "description": "Partnering with international brands and industry leaders"
+  },
+  "industries": {
+    "title": "Industries we serve",
+    "description": "Cross-industry experience with reusable growth playbooks"
+  },
+  "cases": {
+    "title": "Featured case studies",
+    "description": "Integrating content, technology & data to unlock measurable business growth"
+  },
+  "services": {
+    "title": "Our services",
+    "description": "A full-stack solution across content, technology & data",
+    "learnMore": "Learn more →"
+  },
+  "testimonials": {
+    "title": "Client testimonials",
+    "description": "What our partners say"
+  },
+  "cta": {
+    "title": "Ready to get started?",
+    "description": "Partner with us to build tech-powered marketing and product solutions"
+  }
+}

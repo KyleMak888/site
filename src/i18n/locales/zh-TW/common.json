@@ -1,0 +1,71 @@
+{
+  "nav": {
+    "home": "首頁",
+    "services": "服務",
+    "work": "案例",
+    "insights": "洞察",
+    "about": "關於我們",
+    "contact": "聯絡"
+  },
+  "button": {
+    "learnMore": "了解更多",
+    "viewAll": "查看全部",
+    "viewAllCases": "查看全部案例",
+    "viewAllInsights": "查看全部洞察",
+    "getStarted": "開始合作",
+    "bookConsultation": "預約諮詢",
+    "book15minConsultation": "預約 15 分鐘諮詢",
+    "getCaseStudies": "獲取案例包",
+    "submit": "提交",
+    "send": "發送",
+    "backToHome": "返回首頁"
+  },
+  "language": {
+    "switchTo": "切換語言",
+    "current": "目前語言"
+  },
+  "footer": {
+    "company": "公司",
+    "aboutUs": "關於我們",
+    "careers": "加入我們",
+    "contact": "聯絡方式",
+    "services": "服務",
+    "brandMarketing": "品牌與活動行銷",
+    "digitalProduct": "數位產品研發",
+    "dataMartech": "數據與行銷技術",
+    "resources": "資源",
+    "insights": "洞察",
+    "caseStudies": "案例研究",
+    "legal": "法律",
+    "privacy": "隱私政策",
+    "terms": "服務條款",
+    "copyright": "© {{year}} 廣州領燕科技有限公司。保留所有權利。",
+    "tagline": "內容 × 技術 × 數據",
+    "socialLinks": "社交媒體連結"
+  },
+  "meta": {
+    "defaultTitle": "廣州領燕科技 | 技術驅動的品牌行銷與數位產品",
+    "titleTemplate": "%s | 廣州領燕科技",
+    "description": "內容×技術×數據，持續交付可量化成長。專注品牌行銷、數位產品研發、行銷技術顧問服務。",
+    "keywords": "品牌行銷, 數位產品, 行銷技術, 小程序開發, 網站建設, 數據驅動成長, MarTech, 廣州"
+  },
+  "aria": {
+    "mainNavigation": "主導航",
+    "mobileNavigation": "行動版導航",
+    "skipToContent": "跳到主要內容",
+    "openMenu": "開啟選單",
+    "closeMenu": "關閉選單"
+  },
+  "loading": "載入中...",
+  "error": {
+    "title": "發生錯誤",
+    "description": "抱歉，頁面載入時發生問題。",
+    "reload": "重新載入",
+    "backHome": "返回首頁"
+  },
+  "notFound": {
+    "title": "找不到頁面",
+    "description": "抱歉，您訪問的頁面不存在。",
+    "backHome": "返回首頁"
+  }
+}
